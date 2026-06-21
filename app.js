@@ -1,7 +1,7 @@
 /* ==========================================================
    1. PREMIUM MOCK DATA (قاعدة بيانات المنتجات الفاخرة)
    ========================================================== */
-   const products = [
+const products = [
     { id: 1, name: "Gold Leaf Truffle Burger", category: "Burgers", price: 45.00, image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80", desc: "Wagyu beef, black truffle, 24k gold leaf." },
     { id: 2, name: "Smoked Brisket Burger", category: "Burgers", price: 35.00, image: "https://images.unsplash.com/photo-1586816001966-79b736744398?auto=format&fit=crop&w=500&q=80", desc: "12-hour smoked brisket, aged cheddar." },
     { id: 3, name: "Burrata & Caviar Pizza", category: "Pizza", price: 65.00, image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80", desc: "Fresh burrata, beluga caviar, gold flakes." },
@@ -29,31 +29,38 @@ const themeToggle = document.getElementById('theme-toggle');
 const categoryBtns = document.querySelectorAll('.cat-btn');
 const toast = document.getElementById('toast-notification');
 
+// Modal Elements (نوافذ الدفع والشكر)
+const checkoutBtn = document.getElementById('checkout-btn');
+const checkoutModal = document.getElementById('checkout-modal');
+const confirmOrderBtn = document.getElementById('confirm-order-btn');
+const thankYouScreen = document.getElementById('thank-you-screen');
+const closeThankYouBtn = document.getElementById('close-thank-you');
+const paymentRadios = document.querySelectorAll('input[name="payment"]');
+const visaFields = document.getElementById('visa-fields');
+
 /* ==========================================================
    3. INITIALIZE STORE (تشغيل المتجر)
    ========================================================== */
 document.addEventListener('DOMContentLoaded', () => {
-    // عرض كل المنتجات في البداية
     renderProducts(products);
-    
-    // تفعيل المود الليلي الافتراضي
     document.body.classList.add('dark-mode');
+    if(themeToggle) themeToggle.innerText = 'Light';
 });
 
 /* ==========================================================
-   4. RENDER PRODUCTS (عرض الماكلة في الشاشة)
+   4. RENDER PRODUCTS (عرض المنتجات)
    ========================================================== */
 function renderProducts(items) {
-    productsGrid.innerHTML = ''; // تنظيف الشاشة
+    productsGrid.innerHTML = ''; 
 
     if(items.length === 0) {
-        productsGrid.innerHTML = `<p style="text-align:center; width:100%; opacity:0.5;">No items found in this category.</p>`;
+        productsGrid.innerHTML = `<p style="text-align:center; width:100%; opacity:0.5;">No items found.</p>`;
         return;
     }
 
     items.forEach(item => {
         const productCard = document.createElement('div');
-        productCard.classList.add('product-card', 'glass-panel', '3d-hover');
+        productCard.className = 'product-card glass-panel 3d-hover';
         productCard.innerHTML = `
             <div style="height: 200px; overflow: hidden; border-radius: 20px 20px 0 0;">
                 <img src="${item.image}" alt="${item.name}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;">
@@ -63,7 +70,7 @@ function renderProducts(items) {
                 <p style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 15px;">${item.desc}</p>
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <span style="font-weight: 700; color: var(--accent-gold); font-size: 1.2rem;">$${item.price.toFixed(2)}</span>
-                    <button class="btn-primary" onclick="addToCart(${item.id})" style="padding: 8px 20px; font-size: 0.9rem;">Add +</button>
+                    <button class="btn-primary" onclick="addToCart(${item.id})" style="padding: 8px 20px; font-size: 0.9rem;">Add</button>
                 </div>
             </div>
         `;
@@ -76,9 +83,7 @@ function renderProducts(items) {
    ========================================================== */
 categoryBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
-        // نزع التفعيل من كل الأزرار
         categoryBtns.forEach(b => b.classList.remove('active'));
-        // تفعيل الزر المضغوط
         e.target.classList.add('active');
         
         const category = e.target.getAttribute('data-cat');
@@ -91,11 +96,9 @@ categoryBtns.forEach(btn => {
 /* ==========================================================
    6. CART LOGIC (نظام السلة الذكي)
    ========================================================== */
-// فتح وإغلاق السلة
-cartOpenBtn.addEventListener('click', () => cartDrawer.classList.add('open'));
-closeCartBtn.addEventListener('click', () => cartDrawer.classList.remove('open'));
+if(cartOpenBtn) cartOpenBtn.addEventListener('click', () => cartDrawer.classList.add('open'));
+if(closeCartBtn) closeCartBtn.addEventListener('click', () => cartDrawer.classList.remove('open'));
 
-// إضافة منتج للسلة
 window.addToCart = function(productId) {
     const product = products.find(p => p.id === productId);
     const existingItem = cart.find(item => item.id === productId);
@@ -110,7 +113,6 @@ window.addToCart = function(productId) {
     showToast();
 }
 
-// تحديث واجهة السلة والحسابات
 function updateCartUI() {
     cartItemsContainer.innerHTML = '';
     let subtotal = 0;
@@ -127,42 +129,76 @@ function updateCartUI() {
                 <h4 style="font-size: 0.95rem;">${item.name}</h4>
                 <span style="color: var(--accent-gold); font-size: 0.9rem;">$${item.price.toFixed(2)} x ${item.quantity}</span>
             </div>
-            <button onclick="removeFromCart(${index})" style="background: transparent; border: none; color: red; cursor: pointer; font-size: 1.2rem;">🗑️</button>
+            <button onclick="removeFromCart(${index})" style="background: transparent; border: none; color: #ff4d4d; cursor: pointer; font-size: 0.9rem; font-weight: bold;">Remove</button>
         `;
         cartItemsContainer.appendChild(cartItemEl);
     });
 
-    cartCount.innerText = totalItems;
-    cartSubtotal.innerText = `$${subtotal.toFixed(2)}`;
-    
-    // حساب المجموع النهائي مع التوصيل
-    if(subtotal > 0) {
-        cartTotal.innerText = `$${(subtotal + deliveryFee).toFixed(2)}`;
-    } else {
-        cartTotal.innerText = `$0.00`;
-    }
+    if(cartCount) cartCount.innerText = totalItems;
+    if(cartSubtotal) cartSubtotal.innerText = `$${subtotal.toFixed(2)}`;
+    if(cartTotal) cartTotal.innerText = subtotal > 0 ? `$${(subtotal + deliveryFee).toFixed(2)}` : `$0.00`;
 }
 
-// إزالة منتج من السلة
 window.removeFromCart = function(index) {
     cart.splice(index, 1);
     updateCartUI();
 }
 
 /* ==========================================================
-   7. LUXURY TOAST NOTIFICATION (إشعار الإضافة)
+   7. CHECKOUT & MODALS LOGIC (برمجة النوافذ المنبثقة)
+   ========================================================== */
+// فتح نافذة الدفع
+if(checkoutBtn) {
+    checkoutBtn.addEventListener('click', () => {
+        if(cart.length === 0) {
+            alert("Your bag is empty. Please add items before checking out.");
+            return;
+        }
+        cartDrawer.classList.remove('open'); // غلق السلة
+        checkoutModal.classList.remove('hidden'); // فتح نافذة الدفع
+    });
+}
+
+// إظهار وإخفاء معلومات الفيزا
+paymentRadios.forEach(radio => {
+    radio.addEventListener('change', (e) => {
+        if(e.target.value === 'visa') {
+            visaFields.classList.remove('hidden');
+        } else {
+            visaFields.classList.add('hidden');
+        }
+    });
+});
+
+// تأكيد الطلب وفتح صفحة الشكر
+if(confirmOrderBtn) {
+    confirmOrderBtn.addEventListener('click', () => {
+        checkoutModal.classList.add('hidden'); // غلق نافذة الدفع
+        thankYouScreen.classList.remove('hidden'); // إظهار الشكر
+        cart = []; // تفريغ السلة بعد الطلب
+        updateCartUI();
+    });
+}
+
+// غلق صفحة الشكر والعودة
+if(closeThankYouBtn) {
+    closeThankYouBtn.addEventListener('click', () => {
+        thankYouScreen.classList.add('hidden');
+    });
+}
+
+/* ==========================================================
+   8. LUXURY TOAST NOTIFICATION (إشعار الإضافة)
    ========================================================== */
 function showToast() {
     toast.style.cssText = "position: fixed; bottom: 30px; right: 30px; background: var(--accent-gold); color: #000; padding: 15px 25px; border-radius: 50px; font-weight: bold; z-index: 9999; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4); transform: translateY(100px); opacity: 0; transition: all 0.4s ease;";
     toast.classList.remove('hidden');
     
-    // Animation In
     setTimeout(() => {
         toast.style.transform = "translateY(0)";
         toast.style.opacity = "1";
     }, 10);
 
-    // Animation Out
     setTimeout(() => {
         toast.style.transform = "translateY(100px)";
         toast.style.opacity = "0";
@@ -171,14 +207,15 @@ function showToast() {
 }
 
 /* ==========================================================
-   8. DARK / LIGHT MODE TOGGLE (مفتاح الإضاءة)
+   9. DARK / LIGHT MODE TOGGLE (مفتاح الإضاءة)
    ========================================================== */
-themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    
-    if(document.body.classList.contains('dark-mode')) {
-        themeToggle.innerText = '☀️';
-    } else {
-        themeToggle.innerText = '🌙';
-    }
-});
+if(themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        if(document.body.classList.contains('dark-mode')) {
+            themeToggle.innerText = 'Light';
+        } else {
+            themeToggle.innerText = 'Dark';
+        }
+    });
+}
