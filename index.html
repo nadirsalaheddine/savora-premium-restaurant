@@ -10,7 +10,6 @@
 <body class="light-mode">
 
     <div id="toast-notification" class="toast hidden">
-        <span class="toast-icon">✓</span>
         <span class="toast-message">Added to your exquisite bag</span>
     </div>
 
@@ -38,8 +37,8 @@
 
             <div class="nav-controls">
                 <div class="search-bar glass-input">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" id="search-input" placeholder="Search menu...">
+                    <span class="search-icon" style="font-weight: 500; margin-right: 5px;">Search:</span>
+                    <input type="text" id="search-input" placeholder="Menu...">
                 </div>
                 
                 <select id="currency-switcher" class="premium-select">
@@ -55,9 +54,9 @@
                     <option value="it">IT</option>
                 </select>
 
-                <button id="theme-toggle" class="icon-btn">🌓</button>
-                <button id="cart-open-btn" class="icon-btn cart-btn">
-                    🛒 <span id="cart-count" class="badge">0</span>
+                <button id="theme-toggle" class="icon-btn" style="font-weight: 600;">Theme</button>
+                <button id="cart-open-btn" class="icon-btn cart-btn" style="font-weight: 600;">
+                    Bag <span id="cart-count" class="badge">0</span>
                 </button>
             </div>
         </div>
@@ -150,26 +149,26 @@
                     <div class="avatar"></div>
                     <div>
                         <h4>Emma W.</h4>
-                        <span class="rating">5.0 ⭐</span>
+                        <span class="rating" style="font-weight: 600;">5.0 / 5.0</span>
                     </div>
                 </div>
                 <p>"Absolutely breathtaking. The ambiance and the food belong to a world-class standard."</p>
             </div>
-            </div>
+        </div>
     </section>
 
     <section id="location" class="section-padding">
         <div class="location-card glass-panel 3d-hover" onclick="window.open('https://maps.google.com')">
             <h3>Visit Us</h3>
             <p>123 Luxury Avenue, Culinary District</p>
-            <span class="map-hint">Tap to open Google Maps 📍</span>
+            <span class="map-hint" style="text-decoration: underline; cursor: pointer;">Tap to open Google Maps</span>
         </div>
     </section>
 
     <div id="cart-drawer" class="cart-drawer glass-panel">
         <div class="cart-header">
             <h2>Your Bag</h2>
-            <button id="close-cart-btn" class="icon-btn">✕</button>
+            <button id="close-cart-btn" class="icon-btn" style="font-weight: bold;">Close</button>
         </div>
         <div id="cart-items" class="cart-items-container">
             </div>
@@ -225,10 +224,10 @@
 
     <div id="thank-you-screen" class="modal-overlay hidden">
         <div class="modal-content glass-panel text-center">
-            <h1 class="success-icon">✨</h1>
+            <h2 style="color: var(--accent-gold); margin-bottom: 10px;">Success!</h2>
             <h2>Thank You!</h2>
             <p>Your premium order has been received. Our chefs are preparing your masterpiece.</p>
-            <button id="close-thank-you" class="btn-secondary">Return to Home</button>
+            <button id="close-thank-you" class="btn-secondary" style="margin-top: 15px;">Return to Home</button>
         </div>
     </div>
 
@@ -242,8 +241,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>2026 &copy; All Rights Reserved</p>
-            <p class="developer-tag">Designed & Developed by <span class="gold-text">Nadir salaheddine</span></p>
+            <p>2026 © All Rights Reserved</p>
+            <p class="developer-tag">Designed & Developed by <span class="gold-text">Nadir Salah Eddine</span></p>
         </div>
     </footer>
 
