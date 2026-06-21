@@ -1,0 +1,285 @@
+/* ==========================================================
+   1. ROOT VARIABLES (Apple-Level Luxury Palette)
+   ========================================================== */
+   :root {
+    /* الألوان الافتراضية (Light Mode - كريمي فاخر) */
+    --bg-main: #FDFBF7;
+    --text-main: #121212;
+    --text-muted: #666666;
+    --accent-gold: #D4AF37;
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glass-border: rgba(0, 0, 0, 0.05);
+    --shadow-premium: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.dark-mode {
+    /* المود الليلي (Dark Mode - أسود فحمي تع آبل) */
+    --bg-main: #121212;
+    --text-main: #FFFFFF;
+    --text-muted: #A0A0A0;
+    --accent-gold: #E5C158;
+    --glass-bg: rgba(30, 30, 30, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --shadow-premium: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================
+   2. GLOBAL RESET & TYPOGRAPHY
+   ========================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .logo-text, .premium-title {
+    font-family: 'Syne', sans-serif;
+}
+
+/* ==========================================================
+   3. GLASSMORPHISM & UTILITIES (تأثير الزجاج)
+   ========================================================== */
+.glass-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px); /* تأثير الضبابية تع الأيفون */
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+}
+
+.glass-panel, .glass-section, .cart-drawer, .modal-content {
+    background: var(--glass-bg);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: var(--shadow-premium);
+}
+
+/* ==========================================================
+   4. NAVIGATION BAR
+   ========================================================== */
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text-main);
+}
+
+.logo-spinner {
+    width: 35px;
+    height: 35px;
+    border: 2px solid var(--accent-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--accent-gold);
+    animation: spin 15s linear infinite; /* دوران بطيء وفخم */
+}
+
+.desktop-nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    margin: 0 15px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.desktop-nav a:hover {
+    color: var(--accent-gold);
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.glass-input {
+    display: flex;
+    align-items: center;
+    background: var(--glass-border);
+    border-radius: 30px;
+    padding: 8px 15px;
+}
+
+.glass-input input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-main);
+    margin-left: 10px;
+}
+
+.premium-select {
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    color: var(--text-main);
+    padding: 5px 10px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* ==========================================================
+   5. HERO SECTION & AURA GLOW
+   ========================================================== */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+/* الهالة الضوئية الفاخرة */
+.aura-glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--accent-gold) 0%, rgba(212, 175, 55, 0) 70%);
+    opacity: 0.15;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: -1;
+    animation: floatAura 6s ease-in-out infinite;
+}
+
+.premium-title {
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, var(--text-main), var(--accent-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.premium-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.btn-primary {
+    background: var(--accent-gold);
+    color: #121212;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* ==========================================================
+   6. 3D HOVER EFFECTS & MENU GRID
+   ========================================================== */
+.premium-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.product-card {
+    perspective: 1000px;
+}
+
+.3d-hover {
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.3d-hover:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.skeleton-card {
+    height: 350px;
+    background: linear-gradient(90deg, var(--glass-border) 25%, rgba(150,150,150,0.1) 50%, var(--glass-border) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 20px;
+}
+
+/* ==========================================================
+   7. CART DRAWER (السلة الجانبية)
+   ========================================================== */
+.cart-drawer {
+    position: fixed;
+    top: 0;
+    right: -500px; /* مخفية أوتوماتيكيا */
+    width: 100%;
+    max-width: 450px;
+    height: 100vh;
+    z-index: 2000;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 24px 0 0 24px;
+}
+
+.cart-drawer.open {
+    right: 0;
+}
+
+/* ==========================================================
+   8. ANIMATIONS (الحركة الفاخرة)
+   ========================================================== */
+@keyframes spin { 100% { transform: rotate(360deg); } }
+@keyframes floatAura { 
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(0, 20px) scale(1.05); }
+}
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+
+/* ==========================================================
+   9. MOBILE RESPONSIVENESS (أولوية الهاتف)
+   ========================================================== */
+@media (max-width: 768px) {
+    .desktop-nav { display: none; }
+    .premium-title { font-size: 3.5rem; }
+    .hero-buttons { display: flex; flex-direction: column; gap: 15px; }
+}
