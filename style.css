@@ -1,0 +1,99 @@
+@tailwind base;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  body {
+    @apply bg-luxury-cream text-luxury-dark-gray transition-colors duration-500 ease-in-out;
+  }
+
+  body.dark {
+    @apply bg-luxury-charcoal text-luxury-warm-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne', sans-serif;
+    @apply tracking-tight font-bold;
+  }
+}
+
+@layer components {
+  /* Ultra-Premium iOS Glassmorphism Container */
+  .premium-glass {
+    @apply bg-white/40 dark:bg-luxury-softBlack/40 
+           backdrop-blur-ios border border-white/20 dark:border-white/5 
+           shadow-premium dark:shadow-premium-dark 
+           transition-all duration-500 ease-out;
+  }
+
+  /* Infinite Luxury Smooth Logo Rotation */
+  .rotating-logo {
+    animation: luxurySpin 25s linear infinite;
+  }
+
+  @keyframes luxurySpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* 3D Perspective Card Layout for Culinary Items */
+  .product-glass-card {
+    @apply premium-glass rounded-3xl overflow-hidden p-5
+           will-change-transform transition-all duration-500 ease-out;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+
+  .product-glass-card:hover {
+    transform: translateY(-8px) rotateX(3deg) rotateY(-3deg);
+    @apply shadow-ios-shadow border-white/50 dark:border-white/15;
+  }
+
+  /* Floating Input Fields with Interactive Label Shifts */
+  .input-glass-group {
+    @apply relative mb-6 w-full;
+  }
+
+  .input-glass-group input, 
+  .input-glass-group textarea {
+    @apply w-full px-5 py-4 bg-white/10 dark:bg-white/5 border border-white/30 dark:border-white/10 rounded-2xl
+           outline-none transition-all duration-300 text-base backdrop-blur-md text-luxury-dark-gray dark:text-white;
+  }
+
+  .input-glass-group input:focus, 
+  .input-glass-group textarea:focus {
+    @apply border-luxury-gold bg-white/50 dark:bg-luxury-softBlack/50 ring-1 ring-luxury-gold/20;
+  }
+
+  .input-glass-group label {
+    @apply absolute left-5 top-4 text-gray-400 pointer-events-none transition-all duration-300 transform origin-left;
+  }
+
+  .input-glass-group input:focus ~ label,
+  .input-glass-group input:not(:placeholder-shown) ~ label,
+  .input-glass-group textarea:focus ~ label,
+  .input-glass-group textarea:not(:placeholder-shown) ~ label {
+    @apply -translate-y-7 scale-75 text-luxury-gold font-medium;
+  }
+
+  /* High-End Tactile Action Buttons */
+  .btn-premium {
+    @apply px-8 py-4 rounded-full font-medium tracking-wide text-xs uppercase
+           transition-all duration-300 ease-out active:scale-95 transform will-change-transform;
+  }
+
+  .btn-premium-primary {
+    @apply btn-premium bg-luxury-charcoal text-white hover:bg-luxury-gold hover:text-luxury-charcoal 
+           dark:bg-luxury-warm-white dark:text-luxury-charcoal dark:hover:bg-luxury-gold dark:hover:text-luxury-charcoal
+           shadow-lg shadow-black/5 dark:shadow-white/5;
+  }
+
+  .btn-premium-secondary {
+    @apply btn-premium border border-luxury-charcoal/20 text-luxury-charcoal hover:border-luxury-charcoal
+           dark:border-white/20 dark:text-white dark:hover:border-white;
+  }
+}
+@tailwind utilities;
