@@ -1,401 +1,2389 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" dir="ltr" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Savora - Ultra-premium Restaurant & Café. A luxury digital experience.">
-    <!-- SEO & Open Graph -->
-    <meta property="og:title" content="Savora | Luxury Dining">
-    <meta property="og:description" content="Experience premium dining and exceptional craftsmanship.">
-    <meta property="og:image" content="assets/savora-og.jpg">
-    <title>Savora | Premium Restaurant & Café</title>
-
-    <!-- Google Fonts: Syne (Headings) & Inter (Body) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- ============================================ -->
+  <!-- SAVORA — ULTRA-PREMIUM RESTAURANT & CAFÉ    -->
+  <!-- Phase 1: HTML5 Semantic Structure           -->
+  <!-- Designed & Developed by Nadir Salaheddine   -->
+  <!-- ============================================ -->
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO Core -->
+  <title>Savora | Ultra-Premium Restaurant & Café Experience</title>
+  <meta name="description" content="Savora — An ultra-premium dining experience. Discover luxury cuisine, artisan coffee, and unforgettable moments. Reserve your table or order now.">
+  <meta name="keywords" content="Savora, premium restaurant, luxury café, fine dining, gourmet food, reservation, online order">
+  <meta name="author" content="Nadir Salaheddine">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://savora.restaurant">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:url" content="https://savora.restaurant">
+  <meta property="og:title" content="Savora | Ultra-Premium Restaurant & Café">
+  <meta property="og:description" content="Experience culinary excellence at Savora. Luxury dining, premium ingredients, unforgettable atmosphere.">
+  <meta property="og:image" content="https://savora.restaurant/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Savora">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://savora.restaurant">
+  <meta name="twitter:title" content="Savora | Ultra-Premium Restaurant & Café">
+  <meta name="twitter:description" content="Experience culinary excellence at Savora. Luxury dining, premium ingredients, unforgettable atmosphere.">
+  <meta name="twitter:image" content="https://savora.restaurant/assets/twitter-image.jpg">
+  <meta name="twitter:creator" content="@savora">
+  
+  <!-- Favicon & App Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://maps.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://maps.googleapis.com">
+  
+  <!-- Fonts: Syne (Headings) + Inter (Body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Structured Data: Restaurant -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Savora",
+    "image": "https://savora.restaurant/assets/restaurant-hero.jpg",
+    "url": "https://savora.restaurant",
+    "telephone": "+1-555-SAVORA",
+    "priceRange": "$$$$",
+    "servesCuisine": ["International", "Mediterranean", "Fusion", "Gourmet"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Luxury Avenue",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "postalCode": "10001",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.7128",
+      "longitude": "-74.0060"
+    },
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "23:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "00:00"}
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "2847"
+    },
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://savora.restaurant/reservation",
+        "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]
+      },
+      "result": {
+        "@type": "Reservation",
+        "name": "Table Reservation"
+      }
+    }
+  }
+  </script>
+  
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://savora.restaurant/"},
+      {"@type": "ListItem", "position": 2, "name": "Menu", "item": "https://savora.restaurant/menu"},
+      {"@type": "ListItem", "position": 3, "name": "Reservation", "item": "https://savora.restaurant/reservation"}
+    ]
+  }
+  </script>
+  
+  <!-- Phase 2 Hook: CSS3 Stylesheet -->
+  <!-- <link rel="stylesheet" href="css/savora-core.css"> -->
+  <!-- <link rel="stylesheet" href="css/savora-dark.css" media="(prefers-color-scheme: dark)"> -->
+  
+  <style>
+    /* CRITICAL CSS: Minimal structural styles only for Phase 1 visibility */
+    /* Phase 2 will replace this with the full luxury design system */
+    :root {
+      --font-heading: 'Syne', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }
+    img { max-width: 100%; height: auto; display: block; }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    [hidden] { display: none !important; }
+    .skeleton { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: skeleton-loading 1.5s infinite; }
+    @keyframes skeleton-loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    
+    /* Modal/Overlay structural hiding */
+    .modal-overlay { position: fixed; inset: 0; z-index: 1000; opacity: 0; visibility: hidden; }
+    .sidebar { position: fixed; top: 0; right: 0; width: 100%; max-width: 480px; height: 100vh; z-index: 1001; transform: translateX(100%); }
+    
+    /* Loading Screen */
+    #loading-screen { position: fixed; inset: 0; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    
+    /* Skip Link */
+    .skip-link { position: absolute; top: -40px; left: 0; z-index: 10000; padding: 8px 16px; transition: top 0.3s; }
+    .skip-link:focus { top: 0; }
+  </style>
 </head>
-<body class="savora-app">
 
-    <!-- ==========================================
-         PREMIUM LOADING SCREEN
-    =========================================== -->
-    <div id="loading-screen" class="loader-container" aria-hidden="false">
-        <div class="loader-logo-wrapper">
-            <h1 class="loader-brand">Savora</h1>
-            <div class="skeleton-progress-bar"></div>
-        </div>
+<body itemscope itemtype="https://schema.org/Restaurant">
+  
+  <!-- ============================================ -->
+  <!-- SKIP TO CONTENT (Accessibility)              -->
+  <!-- ============================================ -->
+  <a href="#main-content" class="skip-link" data-lang-key="skipToContent">Skip to Main Content</a>
+  
+  <!-- ============================================ -->
+  <!-- LOADING SCREEN                               -->
+  <!-- ============================================ -->
+  <div id="loading-screen" role="status" aria-live="polite" aria-label="Loading Savora experience">
+    <div class="loading-brand">
+      <svg class="loading-logo" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="2"/>
+        <path d="M40 20C40 20 25 30 25 42C25 52 32 58 40 58C48 58 55 52 55 42C55 30 40 20 40 20Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="40" cy="42" r="8" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      <h1 class="loading-title" data-lang-key="loadingTitle">Savora</h1>
+      <p class="loading-subtitle" data-lang-key="loadingSubtitle">Preparing your luxury experience...</p>
     </div>
-
-    <!-- ==========================================
-         TOAST NOTIFICATIONS CONTAINER
-    =========================================== -->
-    <div id="toast-container" class="toast-wrapper" aria-live="polite">
-        <!-- JS will inject dynamic toasts here (e.g., "Item Added Successfully") -->
+    <div class="loading-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Loading progress">
+      <div class="loading-progress-bar"></div>
     </div>
-
-    <!-- ==========================================
-         MAIN NAVIGATION (STICKY & GLASSMORPHISM)
-    =========================================== -->
-    <header class="navbar glass-effect sticky-nav" data-gsap="nav-reveal">
-        <div class="nav-container">
-            <!-- Animated Logo -->
-            <a href="#home" class="brand-logo" aria-label="Savora Home">
-                <span class="logo-text rotating-logo">Savora</span>
-            </a>
-
-            <!-- Navigation Links -->
-            <nav class="desktop-nav" aria-label="Main Menu">
-                <ul class="nav-links">
-                    <li><a href="#home" class="nav-item">Home</a></li>
-                    <li><a href="#menu" class="nav-item">Menu</a></li>
-                    <li><a href="#reservation" class="nav-item">Reservation</a></li>
-                    <li><a href="#gallery" class="nav-item">Gallery</a></li>
-                    <li><a href="#about" class="nav-item">About</a></li>
-                    <li><a href="#location" class="nav-item">Location</a></li>
-                    <li><a href="#contact" class="nav-item">Contact</a></li>
-                </ul>
-            </nav>
-
-            <!-- Navbar Actions -->
-            <div class="nav-actions">
-                <!-- Search Bar (iPhone Blur Style) -->
-                <div class="search-wrapper">
-                    <input type="search" class="premium-search-input" placeholder="Search menu..." aria-label="Search">
-                    <div class="search-suggestions glass-card hidden"></div>
-                </div>
-
-                <!-- Utilities: Theme, Lang, Currency -->
-                <div class="utility-toggles">
-                    <button class="theme-toggle" aria-label="Toggle Dark/Light Mode">🌓</button>
-                    <select class="lang-selector" aria-label="Select Language">
-                        <option value="en">EN</option>
-                        <option value="fr">FR</option>
-                        <option value="it">IT</option>
-                        <option value="ar">AR</option>
-                    </select>
-                    <select class="currency-selector" aria-label="Select Currency">
-                        <option value="USD">USD $</option>
-                        <option value="EUR">EUR €</option>
-                        <option value="DZD">DZD</option>
-                    </select>
-                </div>
-
-                <!-- Cart Button -->
-                <button class="cart-trigger" aria-label="Open Shopping Cart" aria-controls="cart-drawer">
-                    <span class="cart-icon">🛒</span>
-                    <span class="cart-badge">0</span>
-                </button>
-            </div>
+    <div class="loading-skeleton-grid" aria-hidden="true">
+      <div class="skeleton skeleton-card"></div>
+      <div class="skeleton skeleton-card"></div>
+      <div class="skeleton skeleton-card"></div>
+    </div>
+  </div>
+  
+  <!-- ============================================ -->
+  <!-- TOAST NOTIFICATIONS CONTAINER              -->
+  <!-- ============================================ -->
+  <div id="toast-container" class="toast-container" role="region" aria-live="polite" aria-label="Notifications"></div>
+  
+  <!-- ============================================ -->
+  <!-- NAVIGATION                                   -->
+  <!-- ============================================ -->
+  <header class="site-header" role="banner">
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+      <div class="nav-container">
+        
+        <!-- Brand / Logo -->
+        <a href="#" class="nav-brand" aria-label="Savora Home">
+          <svg class="nav-logo" width="48" height="48" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="2"/>
+            <path d="M40 20C40 20 25 30 25 42C25 52 32 58 40 58C48 58 55 52 55 42C55 30 40 20 40 20Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="40" cy="42" r="8" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          <span class="nav-brand-name" itemprop="name">Savora</span>
+        </a>
+        
+        <!-- Search Bar (iPhone inspired) -->
+        <div class="nav-search" role="search">
+          <form class="search-form" action="/search" method="get" aria-label="Search products">
+            <label for="nav-search-input" class="visually-hidden" data-lang-key="searchLabel">Search</label>
+            <input 
+              type="search" 
+              id="nav-search-input" 
+              class="search-input" 
+              name="q"
+              placeholder="Search our menu..." 
+              data-lang-key="searchPlaceholder"
+              autocomplete="off"
+              aria-autocomplete="list"
+              aria-controls="search-suggestions"
+              aria-expanded="false"
+            >
+            <button type="submit" class="search-submit" aria-label="Submit search">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </button>
+            <div id="search-suggestions" class="search-suggestions" role="listbox" aria-label="Search suggestions" hidden></div>
+          </form>
         </div>
-    </header>
-
-    <!-- ==========================================
-         MAIN CONTENT
-    =========================================== -->
-    <main>
-        <!-- HERO SECTION (Parallax & Mouse Movement) -->
-        <section id="home" class="hero-section" data-gsap="hero-parallax">
-            <div class="hero-content">
-                <h1 class="hero-headline luxury-typography">A Taste of Absolute Luxury</h1>
-                <p class="hero-subtitle elegant-text">Experience culinary perfection where every detail is a masterpiece.</p>
-                <div class="hero-buttons">
-                    <a href="#menu" class="btn btn-primary premium-hover">Order Now</a>
-                    <button class="btn btn-secondary glass-btn" aria-controls="reservation-modal">Reserve Table</button>
-                </div>
-            </div>
-            <!-- Background Elements -->
-            <div class="floating-elements" aria-hidden="true">
-                <div class="soft-orb orb-1"></div>
-                <div class="soft-orb orb-2"></div>
-            </div>
-        </section>
-
-        <!-- CATEGORIES SECTION -->
-        <section id="categories" class="section-spacing">
-            <div class="container">
-                <h2 class="section-title">Explore Our Menu</h2>
-                <div class="category-filters">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="burger">Burger</button>
-                    <button class="filter-btn" data-filter="pizza">Pizza</button>
-                    <button class="filter-btn" data-filter="pasta">Pasta</button>
-                    <button class="filter-btn" data-filter="grills">Grills</button>
-                    <button class="filter-btn" data-filter="salads">Salads</button>
-                    <button class="filter-btn" data-filter="drinks">Drinks</button>
-                    <button class="filter-btn" data-filter="desserts">Desserts</button>
-                    <button class="filter-btn" data-filter="pastries">Pastries</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- MENU SHOWCASE (3D Glass Cards) -->
-        <section id="menu" class="section-spacing background-alternate">
-            <div class="container">
-                <div class="menu-sorting-tools">
-                    <span class="badge badge-popular">Popular</span>
-                    <span class="badge badge-chef">Chef Recommendation</span>
-                    <span class="badge badge-new">Newest</span>
-                </div>
-
-                <div class="product-grid" data-gsap="stagger-cards">
-                    <!-- Product Card Example (Repeated via JS later) -->
-                    <article class="product-card glass-card 3d-hover">
-                        <div class="card-image-wrapper">
-                            <img src="assets/burger-premium.jpg" alt="Truffle Gold Burger" loading="lazy" class="product-image">
-                            <button class="favorite-btn" aria-label="Add to Wishlist">🤍</button>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="product-name">Truffle Gold Burger</h3>
-                            <p class="product-description">Wagyu beef, black truffle glaze, gold leaf brioche bun.</p>
-                            <div class="card-footer">
-                                <span class="product-rating">⭐ 5.0</span>
-                                <span class="product-price" data-base-price="45.00">$45.00</span>
-                            </div>
-                            <button class="btn btn-add-cart">Add To Cart</button>
-                        </div>
-                    </article>
-                    <!-- More cards will populate here -->
-                </div>
-            </div>
-        </section>
-
-        <!-- OFFERS & CHEF'S SPECIAL SECTION -->
-        <section id="offers" class="section-spacing">
-            <div class="container split-layout">
-                <div class="chef-special premium-badge-container">
-                    <h2 class="syne-heading">Chef's Signature</h2>
-                    <p class="inter-body">Discover the exclusive creation of the week.</p>
-                </div>
-                <div class="seasonal-offer glass-card">
-                    <h2>Midnight Pastries Offer</h2>
-                    <div class="countdown-timer" aria-label="Offer Countdown">
-                        <span>02 : 14 : 59</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- GALLERY (Grid Layout & Hover Zoom) -->
-        <section id="gallery" class="section-spacing">
-            <div class="container">
-                <h2 class="section-title">Visual Symphony</h2>
-                <div class="gallery-grid">
-                    <!-- High-quality real photography placeholders -->
-                    <div class="gallery-item hover-zoom"><img src="assets/interior.jpg" alt="Restaurant Interior" loading="lazy"></div>
-                    <div class="gallery-item hover-zoom"><img src="assets/chef.jpg" alt="Chef Cooking" loading="lazy"></div>
-                    <div class="gallery-item hover-zoom"><img src="assets/food-1.jpg" alt="Premium Dish" loading="lazy"></div>
-                    <div class="gallery-item hover-zoom"><img src="assets/coffee.jpg" alt="Artisan Coffee" loading="lazy"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT (Timeline & Story) -->
-        <section id="about" class="section-spacing background-alternate">
-            <div class="container about-layout">
-                <div class="story-content">
-                    <h2 class="section-title">Our Heritage</h2>
-                    <p>Savora was born from a passion for culinary excellence...</p>
-                    <div class="premium-timeline">
-                        <div class="timeline-event">
-                            <span class="year">Mission</span>
-                            <p>To redefine digital and physical culinary luxury.</p>
-                        </div>
-                        <div class="timeline-event">
-                            <span class="year">Vision</span>
-                            <p>Global standard for elite dining experiences.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- REVIEWS -->
-        <section id="reviews" class="section-spacing">
-            <div class="container">
-                <h2 class="section-title">Client Elegance</h2>
-                <div class="reviews-slider">
-                    <div class="review-card glass-card">
-                        <div class="rating">⭐⭐⭐⭐⭐ 5.0</div>
-                        <p class="review-text">"An absolute masterpiece. The ambiance and the flavors are out of this world."</p>
-                        <span class="customer-name">- Elite Critic</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- LOCATION & GOOGLE MAPS -->
-        <section id="location" class="section-spacing">
-            <div class="container location-layout">
-                <div class="location-card glass-card hover-scale">
-                    <h3>Find Savora</h3>
-                    <address>
-                        123 Luxury Avenue, Culinary District<br>
-                        City, Postal Code
-                    </address>
-                    <div class="opening-hours">
-                        <span class="status-badge open-now">Open Now</span>
-                        <p>Mon - Sun: 08:00 AM - 11:00 PM</p>
-                    </div>
-                    <button class="btn btn-primary">Get Directions</button>
-                </div>
-                <div class="map-container premium-shadow">
-                    <!-- Google Maps Iframe Placeholder -->
-                    <div class="map-placeholder" aria-label="Interactive Map">Map Loading...</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT & NEWSLETTER -->
-        <section id="contact" class="section-spacing background-alternate">
-            <div class="container split-layout">
-                <form class="contact-form glass-effect">
-                    <h2>Contact The Concierge</h2>
-                    <div class="input-group">
-                        <input type="text" id="name" required placeholder="Full Name" class="beautiful-input">
-                    </div>
-                    <div class="input-group">
-                        <input type="email" id="email" required placeholder="Email Address" class="beautiful-input">
-                    </div>
-                    <div class="input-group">
-                        <textarea id="message" required placeholder="Your Message" rows="4" class="beautiful-input"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
-                </form>
-
-                <div class="newsletter-box glass-card luxury-design">
-                    <h2>Join the Elite</h2>
-                    <p>Subscribe for exclusive seasonal tasting menus.</p>
-                    <div class="subscription-input-group">
-                        <input type="email" placeholder="Enter your email" class="elegant-input">
-                        <button class="btn btn-secondary">Subscribe</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- ==========================================
-         FOOTER
-    =========================================== -->
-    <footer class="savora-footer">
-        <div class="footer-content container">
-            <div class="footer-brand">
-                <h2>Savora</h2>
-                <p>Redefining Gastronomy.</p>
-            </div>
-            <div class="footer-links">
-                <a href="#terms">Terms & Conditions</a>
-                <a href="#privacy">Privacy Policy</a>
-                <a href="#accessibility">Accessibility</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>2026 © All Rights Reserved</p>
-            <p class="developer-credit">Designed & Developed by <strong>Nadir Salaheddine</strong></p>
-        </div>
-    </footer>
-
-    <!-- ==========================================
-         MODALS & DRAWERS (CART, CHECKOUT, RESERVATION)
-    =========================================== -->
-
-    <!-- Shopping Cart Drawer -->
-    <dialog id="cart-drawer" class="glass-drawer">
-        <div class="drawer-header">
-            <h2>Your Cart</h2>
-            <button class="close-btn" aria-label="Close Cart">✕</button>
-        </div>
-        <div class="drawer-body empty-state-ready">
-            <!-- Empty State Illustration goes here -->
-            <ul class="cart-items-list">
-                <!-- Cart Item Placeholder -->
-                <li class="cart-item">
-                    <img src="assets/burger-premium.jpg" alt="Item" class="cart-item-img">
-                    <div class="cart-item-details">
-                        <h4>Truffle Gold Burger</h4>
-                        <span class="price">$45.00</span>
-                    </div>
-                    <div class="quantity-selector">
-                        <button class="qty-btn minus">-</button>
-                        <span class="qty">1</span>
-                        <button class="qty-btn plus">+</button>
-                    </div>
-                    <button class="delete-btn" aria-label="Remove item">🗑️</button>
-                </li>
+        
+        <!-- Utility Actions -->
+        <div class="nav-actions">
+          
+          <!-- Language Selector -->
+          <div class="nav-language">
+            <button 
+              class="language-toggle" 
+              aria-haspopup="true" 
+              aria-expanded="false"
+              aria-controls="language-menu"
+              aria-label="Select language"
+            >
+              <span class="current-language">EN</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <ul id="language-menu" class="language-menu" role="menu" aria-label="Language options" hidden>
+              <li role="none"><button role="menuitem" data-lang="en" class="language-option active" aria-current="true">English</button></li>
+              <li role="none"><button role="menuitem" data-lang="fr" class="language-option">Français</button></li>
+              <li role="none"><button role="menuitem" data-lang="it" class="language-option">Italiano</button></li>
+              <li role="none"><button role="menuitem" data-lang="ar" class="language-option" data-dir="rtl">العربية</button></li>
             </ul>
+          </div>
+          
+          <!-- Currency Selector -->
+          <div class="nav-currency">
+            <button 
+              class="currency-toggle" 
+              aria-haspopup="true" 
+              aria-expanded="false"
+              aria-controls="currency-menu"
+              aria-label="Select currency"
+            >
+              <span class="current-currency" data-currency="USD">$</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <ul id="currency-menu" class="currency-menu" role="menu" aria-label="Currency options" hidden>
+              <li role="none"><button role="menuitem" data-currency="USD" class="currency-option active" aria-current="true">USD $</button></li>
+              <li role="none"><button role="menuitem" data-currency="EUR" class="currency-option">EUR €</button></li>
+              <li role="none"><button role="menuitem" data-currency="DZD" class="currency-option">DZD</button></li>
+            </ul>
+          </div>
+          
+          <!-- Dark / Light Mode Toggle -->
+          <button 
+            class="theme-toggle" 
+            aria-label="Toggle dark mode"
+            aria-pressed="false"
+            data-lang-key="themeToggle"
+          >
+            <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" hidden><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          </button>
+          
+          <!-- Wishlist -->
+          <button class="wishlist-toggle" aria-label="Open wishlist" aria-controls="wishlist-sidebar" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            <span class="wishlist-count" aria-label="0 items in wishlist">0</span>
+          </button>
+          
+          <!-- Cart -->
+          <button class="cart-toggle" aria-label="Open cart" aria-controls="cart-sidebar" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            <span class="cart-count" aria-label="0 items in cart">0</span>
+          </button>
+          
+          <!-- Mobile Menu Toggle -->
+          <button 
+            class="mobile-menu-toggle" 
+            aria-label="Toggle menu" 
+            aria-controls="mobile-nav-menu"
+            aria-expanded="false"
+            data-lang-key="menuToggle"
+          >
+            <span class="hamburger-line" aria-hidden="true"></span>
+            <span class="hamburger-line" aria-hidden="true"></span>
+            <span class="hamburger-line" aria-hidden="true"></span>
+          </button>
         </div>
-        <div class="drawer-footer">
-            <div class="cart-calculations">
-                <div class="calc-row"><span>Subtotal:</span> <span id="subtotal">$45.00</span></div>
-                <div class="calc-row"><span>Delivery:</span> <span id="delivery-fee">$5.00</span></div>
-                <div class="calc-row"><span>Tax:</span> <span id="tax">$4.50</span></div>
-                <div class="calc-row grand-total"><span>Total:</span> <span id="grand-total">$54.50</span></div>
+      </div>
+      
+      <!-- Navigation Links (Desktop) -->
+      <div class="nav-links-container">
+        <ul class="nav-links" role="menubar" aria-label="Primary navigation">
+          <li role="none"><a href="#home" class="nav-link" role="menuitem" data-lang-key="navHome">Home</a></li>
+          <li role="none"><a href="#menu" class="nav-link" role="menuitem" data-lang-key="navMenu">Menu</a></li>
+          <li role="none"><a href="#reservation" class="nav-link" role="menuitem" data-lang-key="navReservation">Reservation</a></li>
+          <li role="none"><a href="#gallery" class="nav-link" role="menuitem" data-lang-key="navGallery">Gallery</a></li>
+          <li role="none"><a href="#about" class="nav-link" role="menuitem" data-lang-key="navAbout">About</a></li>
+          <li role="none"><a href="#location" class="nav-link" role="menuitem" data-lang-key="navLocation">Location</a></li>
+          <li role="none"><a href="#contact" class="nav-link" role="menuitem" data-lang-key="navContact">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Mobile Navigation Menu -->
+      <div id="mobile-nav-menu" class="mobile-nav-menu" role="dialog" aria-label="Mobile menu" aria-modal="true" hidden>
+        <ul class="mobile-nav-links" role="menu">
+          <li role="none"><a href="#home" class="mobile-nav-link" role="menuitem" data-lang-key="navHome">Home</a></li>
+          <li role="none"><a href="#menu" class="mobile-nav-link" role="menuitem" data-lang-key="navMenu">Menu</a></li>
+          <li role="none"><a href="#reservation" class="mobile-nav-link" role="menuitem" data-lang-key="navReservation">Reservation</a></li>
+          <li role="none"><a href="#gallery" class="mobile-nav-link" role="menuitem" data-lang-key="navGallery">Gallery</a></li>
+          <li role="none"><a href="#about" class="mobile-nav-link" role="menuitem" data-lang-key="navAbout">About</a></li>
+          <li role="none"><a href="#location" class="mobile-nav-link" role="menuitem" data-lang-key="navLocation">Location</a></li>
+          <li role="none"><a href="#contact" class="mobile-nav-link" role="menuitem" data-lang-key="navContact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- ============================================ -->
+  <!-- MAIN CONTENT                                 -->
+  <!-- ============================================ -->
+  <main id="main-content" role="main">
+    
+    <!-- ========================================== -->
+    <!-- HERO SECTION                               -->
+    <!-- ========================================== -->
+    <section id="home" class="hero-section" aria-label="Hero">
+      <div class="hero-background" aria-hidden="true">
+        <div class="hero-parallax-container">
+          <img 
+            src="assets/hero-food-premium.jpg" 
+            alt="Premium gourmet dish with elegant plating and warm lighting" 
+            class="hero-image"
+            loading="eager"
+            fetchpriority="high"
+            itemprop="image"
+          >
+        </div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-floating-elements" aria-hidden="true">
+          <div class="floating-element" data-speed="0.5"></div>
+          <div class="floating-element" data-speed="0.8"></div>
+          <div class="floating-element" data-speed="1.2"></div>
+          <div class="floating-element" data-speed="0.3"></div>
+        </div>
+      </div>
+      
+      <div class="hero-content">
+        <p class="hero-eyebrow" data-lang-key="heroEyebrow">Welcome to Savora</p>
+        <h1 class="hero-title" data-lang-key="heroTitle">Taste the Extraordinary</h1>
+        <p class="hero-subtitle" data-lang-key="heroSubtitle">An ultra-premium culinary experience where every dish tells a story of passion, craftsmanship, and the finest ingredients.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary" data-lang-key="btnOrderNow">Order Now</a>
+          <a href="#reservation" class="btn btn-secondary" data-lang-key="btnReserveTable">Reserve Table</a>
+        </div>
+      </div>
+      
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <span class="scroll-text" data-lang-key="scrollExplore">Scroll to Explore</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- CATEGORIES SECTION                         -->
+    <!-- ========================================== -->
+    <section id="categories" class="categories-section" aria-labelledby="categories-heading">
+      <div class="section-header">
+        <p class="section-eyebrow" data-lang-key="categoriesEyebrow">Our Menu</p>
+        <h2 id="categories-heading" class="section-title" data-lang-key="categoriesTitle">Curated Categories</h2>
+        <p class="section-subtitle" data-lang-key="categoriesSubtitle">Explore our exquisite selection of premium dishes crafted by world-class chefs.</p>
+      </div>
+      
+      <div class="categories-grid" role="list">
+        
+        <!-- Category: Burger -->
+        <article class="category-card" role="listitem" data-category="burger">
+          <div class="category-header">
+            <h3 class="category-title" data-lang-key="catBurger">Burger</h3>
+            <span class="category-count">5 items</span>
+          </div>
+          <div class="category-products" role="list">
+            
+            <article class="product-card" role="listitem" data-product-id="b001" data-category="burger" data-price="24.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img 
+                  src="assets/products/burger-truffle-wagyu.jpg" 
+                  alt="Truffle Wagyu Burger with caramelized onions and brioche bun" 
+                  class="product-image"
+                  loading="lazy"
+                >
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Truffle Wagyu Burger to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-chef" data-lang-key="badgeChef">Chef Pick</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productB1Name">Truffle Wagyu Burger</h4>
+                <p class="product-description" data-lang-key="productB1Desc">A5 Wagyu beef, black truffle aioli, caramelized onions, aged cheddar on a toasted brioche bun.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.9 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.9</span>
+                  </div>
+                  <span class="product-price" data-price="24.00">$24.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="b001" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="b002" data-category="burger" data-price="18.50" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/burger-smoked-bbq.jpg" alt="Smoked BBQ Burger with crispy bacon and house BBQ sauce" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Smoked BBQ Burger to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productB2Name">Smoked BBQ Burger</h4>
+                <p class="product-description" data-lang-key="productB2Desc">Angus beef, smoked brisket, crispy bacon, house BBQ sauce, pickles on a sesame seed bun.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.8 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.8</span>
+                  </div>
+                  <span class="product-price" data-price="18.50">$18.50</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="b002" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="b003" data-category="burger" data-price="14.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/burger-classic-cheese.jpg" alt="Classic Cheese Burger with fresh lettuce and tomato" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Classic Cheese Burger to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-popular" data-lang-key="badgePopular">Popular</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productB3Name">Classic Cheese Burger</h4>
+                <p class="product-description" data-lang-key="productB3Desc">Premium beef patty, American cheese, fresh lettuce, tomato, onion, special sauce on a potato bun.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.7 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★☆</span>
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <span class="product-price" data-price="14.00">$14.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="b003" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="b004" data-category="burger" data-price="16.50" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/burger-spicy-jalapeno.jpg" alt="Spicy Jalapeño Burger with pepper jack cheese" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Spicy Jalapeño Burger to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-spicy" data-lang-key="badgeSpicy">Spicy</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productB4Name">Spicy Jalapeño Burger</h4>
+                <p class="product-description" data-lang-key="productB4Desc">Beef patty, pepper jack cheese, fresh jalapeños, chipotle mayo, lettuce on a toasted bun.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.6 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★☆</span>
+                    <span class="rating-value">4.6</span>
+                  </div>
+                  <span class="product-price" data-price="16.50">$16.50</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="b004" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="b005" data-category="burger" data-price="17.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/burger-mushroom-swiss.jpg" alt="Mushroom Swiss Burger with sautéed mushrooms" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Mushroom Swiss Burger to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productB5Name">Mushroom Swiss Burger</h4>
+                <p class="product-description" data-lang-key="productB5Desc">Grilled beef patty, melted Swiss cheese, sautéed wild mushrooms, garlic aioli on a pretzel bun.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.8 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.8</span>
+                  </div>
+                  <span class="product-price" data-price="17.00">$17.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="b005" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+          </div>
+        </article>
+        
+        <!-- Category: Pizza -->
+        <article class="category-card" role="listitem" data-category="pizza">
+          <div class="category-header">
+            <h3 class="category-title" data-lang-key="catPizza">Pizza</h3>
+            <span class="category-count">5 items</span>
+          </div>
+          <div class="category-products" role="list">
+            
+            <article class="product-card" role="listitem" data-product-id="p001" data-category="pizza" data-price="22.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/pizza-truffle-mushroom.jpg" alt="Truffle Mushroom Pizza with fresh herbs" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Truffle Mushroom Pizza to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-chef" data-lang-key="badgeChef">Chef Pick</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productP1Name">Truffle Mushroom Pizza</h4>
+                <p class="product-description" data-lang-key="productP1Desc">Wood-fired crust, black truffle cream, wild mushrooms, mozzarella di bufala, fresh thyme.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 5.0 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">5.0</span>
+                  </div>
+                  <span class="product-price" data-price="22.00">$22.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="p001" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="p002" data-category="pizza" data-price="16.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/pizza-margherita-dop.jpg" alt="Margherita DOP with San Marzano tomatoes" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Margherita DOP to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-popular" data-lang-key="badgePopular">Popular</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productP2Name">Margherita DOP</h4>
+                <p class="product-description" data-lang-key="productP2Desc">San Marzano tomatoes, mozzarella di bufala DOP, fresh basil, extra virgin olive oil on a thin crust.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.9 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.9</span>
+                  </div>
+                  <span class="product-price" data-price="16.00">$16.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="p002" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="p003" data-category="pizza" data-price="19.50" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/pizza-pepperoni-deluxe.jpg" alt="Pepperoni Deluxe pizza with double cheese" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Pepperoni Deluxe to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productP3Name">Pepperoni Deluxe</h4>
+                <p class="product-description" data-lang-key="productP3Desc">Double pepperoni, mozzarella, ricotta dollops, hot honey drizzle, oregano on a hand-tossed crust.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.8 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.8</span>
+                  </div>
+                  <span class="product-price" data-price="19.50">$19.50</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="p003" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="p004" data-category="pizza" data-price="20.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/pizza-quattro-formaggi.jpg" alt="Quattro Formaggi with four premium cheeses" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Quattro Formaggi to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productP4Name">Quattro Formaggi</h4>
+                <p class="product-description" data-lang-key="productP4Desc">Mozzarella, gorgonzola, fontina, parmigiano-reggiano, white truffle oil on a crispy thin crust.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.7 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★☆</span>
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <span class="product-price" data-price="20.00">$20.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="p004" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="p005" data-category="pizza" data-price="18.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/pizza-diavola-spicy.jpg" alt="Diavola Spicy pizza with salami and chili" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Diavola Spicy to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-spicy" data-lang-key="badgeSpicy">Spicy</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productP5Name">Diavola Spicy</h4>
+                <p class="product-description" data-lang-key="productP5Desc">Spicy salami, Calabrian chili, mozzarella, roasted red peppers, honey on a charred crust.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.6 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★☆</span>
+                    <span class="rating-value">4.6</span>
+                  </div>
+                  <span class="product-price" data-price="18.00">$18.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="p005" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+          </div>
+        </article>
+        
+        <!-- Category: Pasta -->
+        <article class="category-card" role="listitem" data-category="pasta">
+          <div class="category-header">
+            <h3 class="category-title" data-lang-key="catPasta">Pasta</h3>
+            <span class="category-count">5 items</span>
+          </div>
+          <div class="category-products" role="list">
+            
+            <article class="product-card" role="listitem" data-product-id="pa001" data-category="pasta" data-price="28.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/pasta-lobster-linguine.jpg" alt="Lobster Linguine with fresh herbs" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Lobster Linguine to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-chef" data-lang-key="badgeChef">Chef Pick</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productPA1Name">Lobster Linguine</h4>
+                <p class="product-description" data-lang-key="productPA1Desc">Fresh Maine lobster, handmade linguine, cherry tomatoes, garlic butter, white wine sauce, basil.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 5.0 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">5.0</span>
+                  </div>
+                  <span class="product-price" data-price="28.00">$28.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="pa001" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="pa002" data-category="pasta" data-price="24.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/pasta-truffle-carbonara.jpg" alt="Truffle Carbonara with pancetta" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Truffle Carbonara to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-popular" data-lang-key="badgePopular">Popular</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productPA2Name">Truffle Carbonara</h4>
+                <p class="product-description" data-lang-key="productPA2Desc">Spaghetti, guanciale, farm eggs, pecorino romano, black truffle shavings, cracked black pepper.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.9 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.9</span>
+                  </div>
+                  <span class="product-price" data-price="24.00">$24.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="pa002" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="pa003" data-category="pasta" data-price="26.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/pasta-seafood-risotto.jpg" alt="Seafood Risotto with saffron" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Seafood Risotto to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productPA3Name">Seafood Risotto</h4>
+                <p class="product-description" data-lang-key="productPA3Desc">Arborio rice, jumbo shrimp, scallops, mussels, saffron broth, parmesan crisp, lemon zest.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.8 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.8</span>
+                  </div>
+                  <span class="product-price" data-price="26.00">$26.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="pa003" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="pa004" data-category="pasta" data-price="19.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/pasta-bolognese-classic.jpg" alt="Bolognese Classic with slow-cooked meat sauce" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Bolognese Classic to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productPA4Name">Bolognese Classic</h4>
+                <p class="product-description" data-lang-key="productPA4Desc">Tagliatelle, slow-cooked beef & pork ragu, San Marzano tomatoes, red wine, parmigiano-reggiano.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.7 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★☆</span>
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <span class="product-price" data-price="19.00">$19.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="pa004" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="pa005" data-category="pasta" data-price="17.50" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/pasta-pesto-genovese.jpg" alt="Pesto Genovese with pine nuts and basil" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Pesto Genovese to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productPA5Name">Pesto Genovese</h4>
+                <p class="product-description" data-lang-key="productPA5Desc">Fresh basil pesto, toasted pine nuts, garlic, pecorino, extra virgin olive oil on trofie pasta.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.6 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★☆</span>
+                    <span class="rating-value">4.6</span>
+                  </div>
+                  <span class="product-price" data-price="17.50">$17.50</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="pa005" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+          </div>
+        </article>
+        
+        <!-- Category: Grills -->
+        <article class="category-card" role="listitem" data-category="grills">
+          <div class="category-header">
+            <h3 class="category-title" data-lang-key="catGrills">Grills</h3>
+            <span class="category-count">5 items</span>
+          </div>
+          <div class="category-products" role="list">
+            
+            <article class="product-card" role="listitem" data-product-id="g001" data-category="grills" data-price="45.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/grill-wagyu-ribeye.jpg" alt="Wagyu Ribeye steak with grill marks" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Wagyu Ribeye to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-chef" data-lang-key="badgeChef">Chef Pick</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productG1Name">Wagyu Ribeye</h4>
+                <p class="product-description" data-lang-key="productG1Desc">A5 Japanese Wagyu ribeye, 8oz, grilled to perfection, served with truffle jus and roasted garlic.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 5.0 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">5.0</span>
+                  </div>
+                  <span class="product-price" data-price="45.00">$45.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="g001" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="g002" data-category="grills" data-price="32.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/grill-lamb-chops.jpg" alt="Lamb Chops with rosemary and mint" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Lamb Chops to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-popular" data-lang-key="badgePopular">Popular</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productG2Name">Lamb Chops</h4>
+                <p class="product-description" data-lang-key="productG2Desc">New Zealand lamb chops, rosemary crust, mint chimichurri, grilled vegetables, potato purée.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.9 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.9</span>
+                  </div>
+                  <span class="product-price" data-price="32.00">$32.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="g002" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="g003" data-category="grills" data-price="28.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/grill-salmon.jpg" alt="Grilled Salmon with lemon butter sauce" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Grilled Salmon to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productG3Name">Grilled Salmon</h4>
+                <p class="product-description" data-lang-key="productG3Desc">Atlantic salmon fillet, lemon butter sauce, asparagus, quinoa, dill garnish.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.8 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.8</span>
+                  </div>
+                  <span class="product-price" data-price="28.00">$28.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="g003" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="g004" data-category="grills" data-price="22.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/grill-chicken-skewers.jpg" alt="Chicken Skewers with peppers and onions" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Chicken Skewers to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productG4Name">Chicken Skewers</h4>
+                <p class="product-description" data-lang-key="productG4Desc">Marinated chicken breast, bell peppers, red onions, tzatziki sauce, warm pita bread.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.6 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★☆</span>
+                    <span class="rating-value">4.6</span>
+                  </div>
+                  <span class="product-price" data-price="22.00">$22.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="g004" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="g005" data-category="grills" data-price="38.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/grill-mixed-platter.jpg" alt="Mixed Grill Platter with assorted meats" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Mixed Grill Platter to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-best" data-lang-key="badgeBest">Best Seller</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productG5Name">Mixed Grill Platter</h4>
+                <p class="product-description" data-lang-key="productG5Desc">Lamb chops, beef tenderloin, chicken kebab, grilled shrimp, assorted vegetables, sauces.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.9 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.9</span>
+                  </div>
+                  <span class="product-price" data-price="38.00">$38.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="g005" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+          </div>
+        </article>
+        
+        <!-- Category: Salads -->
+        <article class="category-card" role="listitem" data-category="salads">
+          <div class="category-header">
+            <h3 class="category-title" data-lang-key="catSalads">Salads</h3>
+            <span class="category-count">5 items</span>
+          </div>
+          <div class="category-products" role="list">
+            
+            <article class="product-card" role="listitem" data-product-id="s001" data-category="salads" data-price="15.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/salad-caesar-supreme.jpg" alt="Caesar Supreme salad with parmesan crisp" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Caesar Supreme to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-popular" data-lang-key="badgePopular">Popular</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productS1Name">Caesar Supreme</h4>
+                <p class="product-description" data-lang-key="productS1Desc">Romaine hearts, parmesan crisp, garlic croutons, anchovy dressing, poached egg, cracked pepper.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.8 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.8</span>
+                  </div>
+                  <span class="product-price" data-price="15.00">$15.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="s001" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="s002" data-category="salads" data-price="14.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/salad-greek-goddess.jpg" alt="Greek Goddess salad with feta and olives" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Greek Goddess to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productS2Name">Greek Goddess</h4>
+                <p class="product-description" data-lang-key="productS2Desc">Cucumber, tomato, red onion, Kalamata olives, feta cheese, oregano, extra virgin olive oil.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.7 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★☆</span>
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <span class="product-price" data-price="14.00">$14.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="s002" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="s003" data-category="salads" data-price="16.50" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/salad-quinoa-bowl.jpg" alt="Quinoa Power Bowl with avocado and greens" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Quinoa Power Bowl to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-new" data-lang-key="badgeNew">New</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productS3Name">Quinoa Power Bowl</h4>
+                <p class="product-description" data-lang-key="productS3Desc">Tri-color quinoa, avocado, chickpeas, kale, cherry tomatoes, tahini dressing, hemp seeds.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.9 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.9</span>
+                  </div>
+                  <span class="product-price" data-price="16.50">$16.50</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="s003" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="s004" data-category="salads" data-price="13.50" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/salad-caprese-fresh.jpg" alt="Caprese Fresh with buffalo mozzarella" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Caprese Fresh to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productS4Name">Caprese Fresh</h4>
+                <p class="product-description" data-lang-key="productS4Desc">Buffalo mozzarella, heirloom tomatoes, fresh basil, balsamic glaze, extra virgin olive oil.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.6 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★☆</span>
+                    <span class="rating-value">4.6</span>
+                  </div>
+                  <span class="product-price" data-price="13.50">$13.50</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="s004" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="s005" data-category="salads" data-price="15.50" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/salad-asian-sesame.jpg" alt="Asian Sesame Salad with edamame" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Asian Sesame Salad to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productS5Name">Asian Sesame Salad</h4>
+                <p class="product-description" data-lang-key="productS5Desc">Mixed greens, edamame, mandarin oranges, crispy wontons, sesame ginger dressing, toasted almonds.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.8 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.8</span>
+                  </div>
+                  <span class="product-price" data-price="15.50">$15.50</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="s005" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+          </div>
+        </article>
+        
+        <!-- Category: Drinks -->
+        <article class="category-card" role="listitem" data-category="drinks">
+          <div class="category-header">
+            <h3 class="category-title" data-lang-key="catDrinks">Drinks</h3>
+            <span class="category-count">5 items</span>
+          </div>
+          <div class="category-products" role="list">
+            
+            <article class="product-card" role="listitem" data-product-id="d001" data-category="drinks" data-price="12.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/drink-signature-mojito.jpg" alt="Signature Mojito with fresh mint and lime" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Signature Mojito to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-chef" data-lang-key="badgeChef">Chef Pick</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productD1Name">Signature Mojito</h4>
+                <p class="product-description" data-lang-key="productD1Desc">Premium white rum, fresh mint, lime, cane sugar, soda water, crushed ice, mint sprig.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.9 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.9</span>
+                  </div>
+                  <span class="product-price" data-price="12.00">$12.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="d001" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="d002" data-category="drinks" data-price="14.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/drink-espresso-martini.jpg" alt="Espresso Martini with coffee beans garnish" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Espresso Martini to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-popular" data-lang-key="badgePopular">Popular</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productD2Name">Espresso Martini</h4>
+                <p class="product-description" data-lang-key="productD2Desc">Vodka, fresh espresso, coffee liqueur, vanilla syrup, shaken, three coffee beans garnish.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 5.0 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">5.0</span>
+                  </div>
+                  <span class="product-price" data-price="14.00">$14.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="d002" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="d003" data-category="drinks" data-price="6.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/drink-fresh-orange.jpg" alt="Fresh Orange Press juice in a glass" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Fresh Orange Press to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productD3Name">Fresh Orange Press</h4>
+                <p class="product-description" data-lang-key="productD3Desc">Freshly squeezed Valencia oranges, ice, mint leaf, served in a chilled glass.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.7 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★☆</span>
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <span class="product-price" data-price="6.00">$6.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="d003" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="d004" data-category="drinks" data-price="7.50" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/drink-artisan-lemonade.jpg" alt="Artisan Lemonade with lavender and lemon slices" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Artisan Lemonade to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-new" data-lang-key="badgeNew">New</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productD4Name">Artisan Lemonade</h4>
+                <p class="product-description" data-lang-key="productD4Desc">House-made lemonade, lavender infusion, fresh lemon slices, sparkling water, edible flowers.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.8 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.8</span>
+                  </div>
+                  <span class="product-price" data-price="7.50">$7.50</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="d004" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="d005" data-category="drinks" data-price="11.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/drink-sparkling-rose.jpg" alt="Sparkling Rosé in an elegant flute" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Sparkling Rosé to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productD5Name">Sparkling Rosé</h4>
+                <p class="product-description" data-lang-key="productD5Desc">Premium sparkling rosé, served chilled in a crystal flute, strawberry garnish.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.9 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.9</span>
+                  </div>
+                  <span class="product-price" data-price="11.00">$11.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="d005" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+          </div>
+        </article>
+        
+        <!-- Category: Desserts -->
+        <article class="category-card" role="listitem" data-category="desserts">
+          <div class="category-header">
+            <h3 class="category-title" data-lang-key="catDesserts">Desserts</h3>
+            <span class="category-count">5 items</span>
+          </div>
+          <div class="category-products" role="list">
+            
+            <article class="product-card" role="listitem" data-product-id="de001" data-category="desserts" data-price="14.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/dessert-chocolate-fondant.jpg" alt="Chocolate Fondant with molten center" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Chocolate Fondant to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-chef" data-lang-key="badgeChef">Chef Pick</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productDE1Name">Chocolate Fondant</h4>
+                <p class="product-description" data-lang-key="productDE1Desc">Valrhona dark chocolate, molten center, vanilla bean ice cream, raspberry coulis, gold leaf.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 5.0 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">5.0</span>
+                  </div>
+                  <span class="product-price" data-price="14.00">$14.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="de001" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="de002" data-category="desserts" data-price="12.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/dessert-creme-brulee.jpg" alt="Crème Brûlée with caramelized sugar top" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Crème Brûlée to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-popular" data-lang-key="badgePopular">Popular</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productDE2Name">Crème Brûlée</h4>
+                <p class="product-description" data-lang-key="productDE2Desc">Madagascar vanilla bean custard, caramelized sugar crust, fresh berries, mint.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.9 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.9</span>
+                  </div>
+                  <span class="product-price" data-price="12.00">$12.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="de002" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="de003" data-category="desserts" data-price="13.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/dessert-tiramisu.jpg" alt="Tiramisu Classico with cocoa dusting" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Tiramisu Classico to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productDE3Name">Tiramisu Classico</h4>
+                <p class="product-description" data-lang-key="productDE3Desc">Mascarpone cream, espresso-soaked ladyfingers, cocoa dusting, dark chocolate shavings.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.8 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.8</span>
+                  </div>
+                  <span class="product-price" data-price="13.00">$13.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="de003" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="de004" data-category="desserts" data-price="11.50" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/dessert-berry-cheesecake.jpg" alt="Berry Cheesecake with fresh berries" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Berry Cheesecake to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productDE4Name">Berry Cheesecake</h4>
+                <p class="product-description" data-lang-key="productDE4Desc">New York style cheesecake, mixed berry compote, graham crust, whipped cream.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.7 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★☆</span>
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <span class="product-price" data-price="11.50">$11.50</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="de004" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="de005" data-category="desserts" data-price="9.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/dessert-mango-sorbet.jpg" alt="Mango Sorbet in a crystal bowl" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Mango Sorbet to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-new" data-lang-key="badgeNew">New</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productDE5Name">Mango Sorbet</h4>
+                <p class="product-description" data-lang-key="productDE5Desc">Alphonso mango sorbet, passion fruit coulis, coconut flakes, fresh mint.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.6 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★☆</span>
+                    <span class="rating-value">4.6</span>
+                  </div>
+                  <span class="product-price" data-price="9.00">$9.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="de005" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+          </div>
+        </article>
+        
+        <!-- Category: Pastries -->
+        <article class="category-card" role="listitem" data-category="pastries">
+          <div class="category-header">
+            <h3 class="category-title" data-lang-key="catPastries">Pastries</h3>
+            <span class="category-count">5 items</span>
+          </div>
+          <div class="category-products" role="list">
+            
+            <article class="product-card" role="listitem" data-product-id="pa001" data-category="pastries" data-price="5.50" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/pastry-almond-croissant.jpg" alt="Almond Croissant with powdered sugar" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Almond Croissant to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-popular" data-lang-key="badgePopular">Popular</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productPAS1Name">Almond Croissant</h4>
+                <p class="product-description" data-lang-key="productPAS1Desc">Butter croissant, almond cream filling, sliced almonds, powdered sugar, baked golden.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.9 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.9</span>
+                  </div>
+                  <span class="product-price" data-price="5.50">$5.50</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="pa001" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="pa002" data-category="pastries" data-price="6.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/pastry-pistachio-baklava.jpg" alt="Pistachio Baklava with honey syrup" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Pistachio Baklava to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productPAS2Name">Pistachio Baklava</h4>
+                <p class="product-description" data-lang-key="productPAS2Desc">Phyllo dough, premium pistachios, orange blossom honey syrup, cardamom, rose water.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.8 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.8</span>
+                  </div>
+                  <span class="product-price" data-price="6.00">$6.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="pa002" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="pa003" data-category="pastries" data-price="5.00" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/pastry-chocolate-eclair.jpg" alt="Chocolate Éclair with glossy ganache" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Chocolate Éclair to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+                <span class="product-badge badge-new" data-lang-key="badgeNew">New</span>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productPAS3Name">Chocolate Éclair</h4>
+                <p class="product-description" data-lang-key="productPAS3Desc">Choux pastry, vanilla pastry cream, dark chocolate ganache glaze, gold dust.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.7 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★☆</span>
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <span class="product-price" data-price="5.00">$5.00</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="pa003" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="pa004" data-category="pastries" data-price="6.50" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/pastry-fruit-tart.jpg" alt="Fruit Tart with seasonal berries" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Fruit Tart to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productPAS4Name">Fruit Tart</h4>
+                <p class="product-description" data-lang-key="productPAS4Desc">Butter pastry shell, vanilla custard, seasonal fresh berries, apricot glaze, mint.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.8 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.8</span>
+                  </div>
+                  <span class="product-price" data-price="6.50">$6.50</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="pa004" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+            <article class="product-card" role="listitem" data-product-id="pa005" data-category="pastries" data-price="4.50" data-currency="USD">
+              <div class="product-image-wrapper">
+                <img src="assets/products/pastry-cinnamon-roll.jpg" alt="Cinnamon Roll with cream cheese frosting" class="product-image" loading="lazy">
+                <div class="product-skeleton skeleton"></div>
+                <button class="product-favorite" aria-label="Add Cinnamon Roll to favorites" data-action="favorite">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name" data-lang-key="productPAS5Name">Cinnamon Roll</h4>
+                <p class="product-description" data-lang-key="productPAS5Desc">Soft brioche dough, Ceylon cinnamon swirl, cream cheese frosting, pecan crumble.</p>
+                <div class="product-meta">
+                  <div class="product-rating" aria-label="Rating: 4.9 out of 5">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating-value">4.9</span>
+                  </div>
+                  <span class="product-price" data-price="4.50">$4.50</span>
+                </div>
+                <button class="btn btn-add-cart" data-action="add-to-cart" data-product-id="pa005" data-lang-key="btnAddToCart">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+            
+          </div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- FULL MENU SECTION                          -->
+    <!-- ========================================== -->
+    <section id="menu" class="menu-section" aria-labelledby="menu-heading">
+      <div class="section-header">
+        <p class="section-eyebrow" data-lang-key="menuEyebrow">Full Menu</p>
+        <h2 id="menu-heading" class="section-title" data-lang-key="menuTitle">Explore Our Menu</h2>
+        <p class="section-subtitle" data-lang-key="menuSubtitle">Filter, sort, and discover your next favorite dish.</p>
+      </div>
+      
+      <!-- Menu Controls -->
+      <div class="menu-controls">
+        <div class="menu-search">
+          <label for="menu-search-input" class="visually-hidden" data-lang-key="menuSearchLabel">Search menu</label>
+          <input type="search" id="menu-search-input" class="menu-search-input" placeholder="Search dishes..." data-lang-key="menuSearchPlaceholder" aria-label="Search menu items">
+        </div>
+        
+        <div class="menu-filters" role="group" aria-label="Menu filters">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true" data-lang-key="filterAll">All</button>
+          <button class="filter-btn" data-filter="popular" aria-pressed="false" data-lang-key="filterPopular">Popular</button>
+          <button class="filter-btn" data-filter="chef" aria-pressed="false" data-lang-key="filterChef">Chef Recommendation</button>
+          <button class="filter-btn" data-filter="bestseller" aria-pressed="false" data-lang-key="filterBestSeller">Best Seller</button>
+          <button class="filter-btn" data-filter="new" aria-pressed="false" data-lang-key="filterNewest">Newest</button>
+          <button class="filter-btn" data-filter="offer" aria-pressed="false" data-lang-key="filterOffer">Offer</button>
+        </div>
+        
+        <div class="menu-sort">
+          <label for="menu-sort-select" class="visually-hidden" data-lang-key="sortLabel">Sort by</label>
+          <select id="menu-sort-select" class="menu-sort-select" aria-label="Sort menu items">
+            <option value="default" data-lang-key="sortDefault">Default</option>
+            <option value="price-low" data-lang-key="sortPriceLow">Price: Low to High</option>
+            <option value="price-high" data-lang-key="sortPriceHigh">Price: High to Low</option>
+            <option value="rating" data-lang-key="sortRating">Highest Rated</option>
+            <option value="name" data-lang-key="sortName">Name</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- Menu Grid (All 40 Products) -->
+      <div class="menu-grid" id="menu-grid" role="list" aria-label="Menu items">
+        <!-- Products will be dynamically rendered or duplicated here from categories -->
+        <!-- For Phase 1, we include the structure for JS to populate -->
+        <div class="menu-skeleton-grid" aria-hidden="true">
+          <div class="skeleton skeleton-menu-card"></div>
+          <div class="skeleton skeleton-menu-card"></div>
+          <div class="skeleton skeleton-menu-card"></div>
+          <div class="skeleton skeleton-menu-card"></div>
+        </div>
+      </div>
+      
+      <!-- No Results Empty State -->
+      <div class="empty-state" id="menu-empty-state" hidden>
+        <div class="empty-state-icon" aria-hidden="true">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><line x1="8" y1="8" x2="14" y2="14"/><line x1="14" y1="8" x2="8" y2="14"/></svg>
+        </div>
+        <h3 class="empty-state-title" data-lang-key="emptyMenuTitle">No dishes found</h3>
+        <p class="empty-state-text" data-lang-key="emptyMenuText">Try adjusting your search or filters.</p>
+      </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- CHEF'S SPECIAL SECTION                     -->
+    <!-- ========================================== -->
+    <section id="chef-special" class="chef-special-section" aria-labelledby="chef-special-heading">
+      <div class="section-header">
+        <p class="section-eyebrow" data-lang-key="chefSpecialEyebrow">Curated by Chef</p>
+        <h2 id="chef-special-heading" class="section-title" data-lang-key="chefSpecialTitle">Chef's Special</h2>
+        <p class="section-subtitle" data-lang-key="chefSpecialSubtitle">Handpicked creations by our Executive Chef, available for a limited time.</p>
+      </div>
+      <div class="chef-special-grid" role="list">
+        <!-- Chef picks will be highlighted products from categories -->
+        <article class="chef-special-card" role="listitem">
+          <div class="chef-special-badge" data-lang-key="badgeChefPick">Chef's Pick</div>
+          <img src="assets/chef-special-1.jpg" alt="Chef's special dish presentation" class="chef-special-image" loading="lazy">
+          <div class="chef-special-content">
+            <h3 class="chef-special-name" data-lang-key="chefSpecial1Name">Wagyu Ribeye</h3>
+            <p class="chef-special-description" data-lang-key="chefSpecial1Desc">Our signature A5 Wagyu, dry-aged for 45 days, served with truffle jus.</p>
+            <span class="chef-special-price" data-price="45.00">$45.00</span>
+          </div>
+        </article>
+      </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- BEST SELLERS SECTION                       -->
+    <!-- ========================================== -->
+    <section id="best-sellers" class="best-sellers-section" aria-labelledby="best-sellers-heading">
+      <div class="section-header">
+        <p class="section-eyebrow" data-lang-key="bestSellersEyebrow">Top Picks</p>
+        <h2 id="best-sellers-heading" class="section-title" data-lang-key="bestSellersTitle">Best Sellers</h2>
+        <p class="section-subtitle" data-lang-key="bestSellersSubtitle">Our most loved dishes, ordered again and again.</p>
+      </div>
+      <div class="best-sellers-grid" role="list">
+        <article class="best-seller-card" role="listitem" data-rank="1">
+          <span class="rank-badge" aria-label="Rank 1">#1</span>
+          <img src="assets/best-seller-1.jpg" alt="Best seller dish" class="best-seller-image" loading="lazy">
+          <h3 class="best-seller-name">Truffle Wagyu Burger</h3>
+          <div class="best-seller-rating" aria-label="4.9 out of 5">★★★★★ 4.9</div>
+        </article>
+      </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- OFFERS SECTION                             -->
+    <!-- ========================================== -->
+    <section id="offers" class="offers-section" aria-labelledby="offers-heading">
+      <div class="section-header">
+        <p class="section-eyebrow" data-lang-key="offersEyebrow">Limited Time</p>
+        <h2 id="offers-heading" class="section-title" data-lang-key="offersTitle">Special Offers</h2>
+        <p class="section-subtitle" data-lang-key="offersSubtitle">Exclusive deals and seasonal promotions.</p>
+      </div>
+      <div class="offers-grid" role="list">
+        <article class="offer-card" role="listitem">
+          <div class="offer-timer" role="timer" aria-label="Offer ends in">
+            <span class="timer-label" data-lang-key="offerEndsIn">Ends in:</span>
+            <div class="timer-countdown" data-end-time="2026-12-31T23:59:59">
+              <span class="timer-unit"><span class="timer-value" data-timer="hours">00</span>h</span>
+              <span class="timer-unit"><span class="timer-value" data-timer="minutes">00</span>m</span>
+              <span class="timer-unit"><span class="timer-value" data-timer="seconds">00</span>s</span>
             </div>
-            <button class="btn btn-primary checkout-trigger w-100">Proceed to Checkout</button>
+          </div>
+          <h3 class="offer-title" data-lang-key="offer1Title">Summer Feast</h3>
+          <p class="offer-description" data-lang-key="offer1Desc">20% off all grills and salads. Perfect for the season.</p>
+          <span class="offer-discount">-20%</span>
+        </article>
+      </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- GALLERY SECTION                            -->
+    <!-- ========================================== -->
+    <section id="gallery" class="gallery-section" aria-labelledby="gallery-heading">
+      <div class="section-header">
+        <p class="section-eyebrow" data-lang-key="galleryEyebrow">Visual Journey</p>
+        <h2 id="gallery-heading" class="section-title" data-lang-key="galleryTitle">Our Gallery</h2>
+        <p class="section-subtitle" data-lang-key="gallerySubtitle">A glimpse into the Savora experience.</p>
+      </div>
+      
+      <div class="gallery-grid" role="list" aria-label="Photo gallery">
+        <figure class="gallery-item" role="listitem" data-category="restaurant">
+          <img src="assets/gallery/restaurant-interior-1.jpg" alt="Savora restaurant interior with warm lighting" class="gallery-image" loading="lazy">
+          <figcaption class="gallery-caption" data-lang-key="galleryRestaurant">Restaurant</figcaption>
+        </figure>
+        <figure class="gallery-item" role="listitem" data-category="food">
+          <img src="assets/gallery/food-plating-1.jpg" alt="Elegant food plating presentation" class="gallery-image" loading="lazy">
+          <figcaption class="gallery-caption" data-lang-key="galleryFood">Food</figcaption>
+        </figure>
+        <figure class="gallery-item" role="listitem" data-category="chef">
+          <img src="assets/gallery/chef-cooking.jpg" alt="Executive chef preparing a dish" class="gallery-image" loading="lazy">
+          <figcaption class="gallery-caption" data-lang-key="galleryChef">Chef</figcaption>
+        </figure>
+        <figure class="gallery-item" role="listitem" data-category="coffee">
+          <img src="assets/gallery/coffee-art.jpg" alt="Latte art in a ceramic cup" class="gallery-image" loading="lazy">
+          <figcaption class="gallery-caption" data-lang-key="galleryCoffee">Coffee</figcaption>
+        </figure>
+        <figure class="gallery-item" role="listitem" data-category="desserts">
+          <img src="assets/gallery/dessert-display.jpg" alt="Premium dessert display" class="gallery-image" loading="lazy">
+          <figcaption class="gallery-caption" data-lang-key="galleryDesserts">Desserts</figcaption>
+        </figure>
+        <figure class="gallery-item" role="listitem" data-category="interior">
+          <img src="assets/gallery/luxury-interior.jpg" alt="Luxury dining area interior" class="gallery-image" loading="lazy">
+          <figcaption class="gallery-caption" data-lang-key="galleryInterior">Interior</figcaption>
+        </figure>
+        <figure class="gallery-item" role="listitem" data-category="kitchen">
+          <img src="assets/gallery/kitchen-action.jpg" alt="Professional kitchen in action" class="gallery-image" loading="lazy">
+          <figcaption class="gallery-caption" data-lang-key="galleryKitchen">Kitchen</figcaption>
+        </figure>
+      </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- ABOUT SECTION                              -->
+    <!-- ========================================== -->
+    <section id="about" class="about-section" aria-labelledby="about-heading">
+      <div class="section-header">
+        <p class="section-eyebrow" data-lang-key="aboutEyebrow">Our Story</p>
+        <h2 id="about-heading" class="section-title" data-lang-key="aboutTitle">About Savora</h2>
+      </div>
+      
+      <div class="about-content">
+        <!-- Restaurant Story -->
+        <article class="about-block">
+          <h3 class="about-subtitle" data-lang-key="aboutStoryTitle">The Savora Story</h3>
+          <p class="about-text" data-lang-key="aboutStoryText">Founded in 2020, Savora was born from a passion for exceptional dining. We believe that every meal should be an experience — a moment of joy, connection, and culinary artistry.</p>
+        </article>
+        
+        <!-- Chef Story -->
+        <article class="about-block">
+          <h3 class="about-subtitle" data-lang-key="aboutChefTitle">Meet Our Chef</h3>
+          <p class="about-text" data-lang-key="aboutChefText">Executive Chef Marco Bellini brings 20 years of Michelin-starred experience to every dish. His philosophy is simple: source the finest ingredients, respect tradition, and innovate with passion.</p>
+        </article>
+        
+        <!-- Mission & Vision -->
+        <div class="mission-vision-grid">
+          <article class="mv-card">
+            <h4 class="mv-title" data-lang-key="missionTitle">Our Mission</h4>
+            <p class="mv-text" data-lang-key="missionText">To create unforgettable dining experiences that celebrate flavor, quality, and the art of hospitality.</p>
+          </article>
+          <article class="mv-card">
+            <h4 class="mv-title" data-lang-key="visionTitle">Our Vision</h4>
+            <p class="mv-text" data-lang-key="visionText">To become the world's most beloved premium restaurant, where every guest feels like family.</p>
+          </article>
         </div>
-    </dialog>
-
-    <!-- Checkout Modal -->
-    <dialog id="checkout-modal" class="premium-modal glass-effect">
-        <div class="modal-content">
-            <h2>Secure Checkout</h2>
-            <form id="checkout-form">
-                <!-- User Details -->
-                <fieldset class="form-section">
-                    <legend>Delivery Details</legend>
-                    <input type="text" placeholder="First Name" required>
-                    <input type="text" placeholder="Last Name" required>
-                    <input type="tel" placeholder="Phone Number" required>
-                    <input type="text" placeholder="Full Address" required>
-                </fieldset>
-                
-                <!-- Delivery & Payment -->
-                <fieldset class="form-section">
-                    <legend>Payment Method</legend>
-                    <label><input type="radio" name="payment" value="cod" checked> Cash On Delivery</label>
-                    <label><input type="radio" name="payment" value="card"> Visa / MasterCard</label>
-                    
-                    <!-- Secure Card Inputs (Hidden by default, toggled via JS) -->
-                    <div class="secure-card-inputs hidden">
-                        <input type="text" placeholder="Card Number">
-                        <div class="split-inputs">
-                            <input type="text" placeholder="MM/YY">
-                            <input type="text" placeholder="CVV">
-                        </div>
-                    </div>
-                </fieldset>
-                <button type="submit" class="btn btn-primary">Confirm Order</button>
-            </form>
+        
+        <!-- History Timeline -->
+        <div class="timeline" role="list" aria-label="Restaurant history timeline">
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">2020</span>
+            <h4 class="timeline-title" data-lang-key="timeline1Title">The Beginning</h4>
+            <p class="timeline-text" data-lang-key="timeline1Text">Savora opened its doors with a vision to redefine casual luxury dining.</p>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">2022</span>
+            <h4 class="timeline-title" data-lang-key="timeline2Title">First Michelin Star</h4>
+            <p class="timeline-text" data-lang-key="timeline2Text">Awarded our first Michelin star for exceptional cuisine and service.</p>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">2024</span>
+            <h4 class="timeline-title" data-lang-key="timeline3Title">Global Recognition</h4>
+            <p class="timeline-text" data-lang-key="timeline3Text">Named among the World's 50 Best Restaurants.</p>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">2026</span>
+            <h4 class="timeline-title" data-lang-key="timeline4Title">Digital Evolution</h4>
+            <p class="timeline-text" data-lang-key="timeline4Text">Launching our premium digital experience for guests worldwide.</p>
+          </div>
         </div>
-    </dialog>
-
-    <!-- Reservation Modal -->
-    <dialog id="reservation-modal" class="premium-modal glass-effect">
-        <div class="modal-content">
-            <h2>Book Your Experience</h2>
-            <form id="reservation-form">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="number" placeholder="Number of Guests" min="1" max="20" required>
-                <input type="date" required>
-                <input type="time" required>
-                <textarea placeholder="Special Notes (Allergies, Occasion...)" rows="3"></textarea>
-                <button type="submit" class="btn btn-primary">Confirm Reservation</button>
-            </form>
+      </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- REVIEWS SECTION                            -->
+    <!-- ========================================== -->
+    <section id="reviews" class="reviews-section" aria-labelledby="reviews-heading">
+      <div class="section-header">
+        <p class="section-eyebrow" data-lang-key="reviewsEyebrow">Testimonials</p>
+        <h2 id="reviews-heading" class="section-title" data-lang-key="reviewsTitle">What Our Guests Say</h2>
+        <p class="section-subtitle" data-lang-key="reviewsSubtitle">Real experiences from real diners.</p>
+      </div>
+      
+      <div class="reviews-grid" role="list">
+        <article class="review-card" role="listitem" itemscope itemtype="https://schema.org/Review">
+          <div class="review-header">
+            <img src="assets/reviews/customer-1.jpg" alt="Sarah M. profile photo" class="review-avatar" loading="lazy">
+            <div class="review-meta">
+              <h4 class="review-name" itemprop="author">Sarah M.</h4>
+              <div class="review-rating" aria-label="5.0 out of 5">
+                <span class="stars" aria-hidden="true">★★★★★</span>
+                <span class="rating-value" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                  <meta itemprop="ratingValue" content="5.0">
+                  5.0
+                </span>
+              </div>
+            </div>
+          </div>
+          <p class="review-text" itemprop="reviewBody" data-lang-key="review1Text">"An absolutely transcendent dining experience. The Wagyu burger was the best I've ever had. Savora sets the standard for premium casual dining."</p>
+          <div class="review-photos" role="list" aria-label="Customer photos">
+            <img src="assets/reviews/customer-1-photo-1.jpg" alt="Customer photo of food" class="review-photo" loading="lazy" role="listitem">
+          </div>
+        </article>
+        
+        <article class="review-card" role="listitem" itemscope itemtype="https://schema.org/Review">
+          <div class="review-header">
+            <img src="assets/reviews/customer-2.jpg" alt="James K. profile photo" class="review-avatar" loading="lazy">
+            <div class="review-meta">
+              <h4 class="review-name" itemprop="author">James K.</h4>
+              <div class="review-rating" aria-label="4.9 out of 5">
+                <span class="stars" aria-hidden="true">★★★★★</span>
+                <span class="rating-value" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                  <meta itemprop="ratingValue" content="4.9">
+                  4.9
+                </span>
+              </div>
+            </div>
+          </div>
+          <p class="review-text" itemprop="reviewBody" data-lang-key="review2Text">"The ambiance, the service, the food — everything was impeccable. The chocolate fondant is a must-try. Already planning my next visit."</p>
+        </article>
+        
+        <article class="review-card" role="listitem" itemscope itemtype="https://schema.org/Review">
+          <div class="review-header">
+            <img src="assets/reviews/customer-3.jpg" alt="Elena R. profile photo" class="review-avatar" loading="lazy">
+            <div class="review-meta">
+              <h4 class="review-name" itemprop="author">Elena R.</h4>
+              <div class="review-rating" aria-label="4.8 out of 5">
+                <span class="stars" aria-hidden="true">★★★★★</span>
+                <span class="rating-value" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                  <meta itemprop="ratingValue" content="4.8">
+                  4.8
+                </span>
+              </div>
+            </div>
+          </div>
+          <p class="review-text" itemprop="reviewBody" data-lang-key="review3Text">"From the moment we walked in, we felt special. The staff went above and beyond. The pasta is handmade perfection."</p>
+          <div class="review-photos" role="list" aria-label="Customer photos">
+            <img src="assets/reviews/customer-3-photo-1.jpg" alt="Customer photo of interior" class="review-photo" loading="lazy" role="listitem">
+            <img src="assets/reviews/customer-3-photo-2.jpg" alt="Customer photo of dessert" class="review-photo" loading="lazy" role="listitem">
+          </div>
+        </article>
+        
+        <article class="review-card" role="listitem" itemscope itemtype="https://schema.org/Review">
+          <div class="review-header">
+            <img src="assets/reviews/customer-4.jpg" alt="David L. profile photo" class="review-avatar" loading="lazy">
+            <div class="review-meta">
+              <h4 class="review-name" itemprop="author">David L.</h4>
+              <div class="review-rating" aria-label="4.6 out of 5">
+                <span class="stars" aria-hidden="true">★★★★☆</span>
+                <span class="rating-value" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                  <meta itemprop="ratingValue" content="4.6">
+                  4.6
+                </span>
+              </div>
+            </div>
+          </div>
+          <p class="review-text" itemprop="reviewBody" data-lang-key="review4Text">"Great food and excellent cocktails. The Espresso Martini was perfectly balanced. A wonderful evening out."</p>
+        </article>
+      </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- RESERVATION SECTION                        -->
+    <!-- ========================================== -->
+    <section id="reservation" class="reservation-section" aria-labelledby="reservation-heading">
+      <div class="section-header">
+        <p class="section-eyebrow" data-lang-key="reservationEyebrow">Book a Table</p>
+        <h2 id="reservation-heading" class="section-title" data-lang-key="reservationTitle">Reserve Your Experience</h2>
+        <p class="section-subtitle" data-lang-key="reservationSubtitle">Secure your spot for an unforgettable meal.</p>
+      </div>
+      
+      <div class="reservation-container">
+        <form class="reservation-form" id="reservation-form" action="/reservation" method="POST" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-name" data-lang-key="labelName">Full Name</label>
+              <input type="text" id="res-name" name="name" required autocomplete="name" aria-required="true" placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label for="res-phone" data-lang-key="labelPhone">Phone Number</label>
+              <input type="tel" id="res-phone" name="phone" required autocomplete="tel" aria-required="true" placeholder="+1 555 000 0000" pattern="[\\+]?[0-9\\s\\-\\(\\)]{7,20}">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-email" data-lang-key="labelEmail">Email Address</label>
+              <input type="email" id="res-email" name="email" required autocomplete="email" aria-required="true" placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+              <label for="res-guests" data-lang-key="labelGuests">Number of Guests</label>
+              <input type="number" id="res-guests" name="guests" required min="1" max="20" aria-required="true" placeholder="2">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-date" data-lang-key="labelDate">Date</label>
+              <input type="date" id="res-date" name="date" required aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="res-time" data-lang-key="labelTime">Time</label>
+              <input type="time" id="res-time" name="time" required aria-required="true">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="res-notes" data-lang-key="labelNotes">Special Notes</label>
+            <textarea id="res-notes" name="notes" rows="3" placeholder="Allergies, special occasions, seating preferences..." data-lang-key="placeholderNotes"></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-large" data-lang-key="btnReserve">Reserve Table</button>
+        </form>
+        
+        <!-- Reservation Success Card (Hidden by default) -->
+        <div class="reservation-success" id="reservation-success" role="alert" aria-live="polite" hidden>
+          <div class="success-icon" aria-hidden="true">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3 class="success-title" data-lang-key="reservationSuccessTitle">Reservation Confirmed!</h3>
+          <p class="success-text" data-lang-key="reservationSuccessText">We look forward to welcoming you. A confirmation email has been sent.</p>
+          <div class="reservation-details" id="reservation-details"></div>
         </div>
-    </dialog>
-
-    <!-- ==========================================
-         FLOATING ACTIONS
-    =========================================== -->
-    <div class="floating-actions">
-        <button class="float-btn whatsapp-btn" aria-label="Contact on WhatsApp">💬</button>
-        <button class="float-btn call-btn" aria-label="Call Restaurant">📞</button>
-        <button class="float-btn back-to-top" aria-label="Back to Top">↑</button>
+      </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- LOCATION SECTION                           -->
+    <!-- ========================================== -->
+    <section id="location" class="location-section" aria-labelledby="location-heading">
+      <div class="section-header">
+        <p class="section-eyebrow" data-lang-key="locationEyebrow">Find Us</p>
+        <h2 id="location-heading" class="section-title" data-lang-key="locationTitle">Our Location</h2>
+        <p class="section-subtitle" data-lang-key="locationSubtitle">Visit us in the heart of the city.</p>
+      </div>
+      
+      <div class="location-container">
+        <!-- Google Maps -->
+        <div class="map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425878428698!3d40.74076684379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzI2LjgiTiA3NMKwMDAnMjMuMyJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Savora Restaurant Location Map"
+            aria-label="Google Maps showing Savora location"
+          ></iframe>
+        </div>
+        
+        <!-- Location Card -->
+        <div class="location-card">
+          <h3 class="location-card-title" data-lang-key="visitUs">Visit Us</h3>
+          <address class="location-address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="streetAddress">123 Luxury Avenue</span><br>
+            <span itemprop="addressLocality">New York</span>, 
+            <span itemprop="addressRegion">NY</span> 
+            <span itemprop="postalCode">10001</span><br>
+            <span itemprop="addressCountry">United States</span>
+          </address>
+          
+          <a href="https://maps.google.com/?q=123+Luxury+Avenue+New+York+NY+10001" class="btn btn-directions" target="_blank" rel="noopener noreferrer" data-lang-key="btnDirections">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+            Get Directions
+          </a>
+          
+          <div class="travel-time" aria-label="Estimated travel time">
+            <span class="travel-time-label" data-lang-key="travelTime">Est. Travel Time:</span>
+            <span class="travel-time-value">15 min</span>
+          </div>
+        </div>
+        
+        <!-- Opening Hours -->
+        <div class="opening-hours" role="list" aria-label="Opening hours">
+          <h3 class="opening-hours-title" data-lang-key="openingHoursTitle">Opening Hours</h3>
+          
+          <div class="hours-grid">
+            <div class="hours-row" role="listitem">
+              <span class="hours-day" data-lang-key="dayMonday">Monday</span>
+              <span class="hours-time">08:00 — 23:00</span>
+              <span class="hours-status status-open" data-lang-key="statusOpen">Open Now</span>
+            </div>
+            <div class="hours-row" role="listitem">
+              <span class="hours-day" data-lang-key="dayTuesday">Tuesday</span>
+              <span class="hours-time">08:00 — 23:00</span>
+              <span class="hours-status" data-lang-key="statusClosed">Closed</span>
+            </div>
+            <div class="hours-row" role="listitem">
+              <span class="hours-day" data-lang-key="dayWednesday">Wednesday</span>
+              <span class="hours-time">08:00 — 23:00</span>
+              <span class="hours-status" data-lang-key="statusClosed">Closed</span>
+            </div>
+            <div class="hours-row" role="listitem">
+              <span class="hours-day" data-lang-key="dayThursday">Thursday</span>
+              <span class="hours-time">08:00 — 23:00</span>
+              <span class="hours-status" data-lang-key="statusClosed">Closed</span>
+            </div>
+            <div class="hours-row" role="listitem">
+              <span class="hours-day" data-lang-key="dayFriday">Friday</span>
+              <span class="hours-time">08:00 — 23:00</span>
+              <span class="hours-status" data-lang-key="statusClosed">Closed</span>
+            </div>
+            <div class="hours-row" role="listitem">
+              <span class="hours-day" data-lang-key="daySaturday">Saturday</span>
+              <span class="hours-time">09:00 — 00:00</span>
+              <span class="hours-status" data-lang-key="statusClosed">Closed</span>
+            </div>
+            <div class="hours-row" role="listitem">
+              <span class="hours-day" data-lang-key="daySunday">Sunday</span>
+              <span class="hours-time">09:00 — 00:00</span>
+              <span class="hours-status" data-lang-key="statusClosed">Closed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- CONTACT SECTION                            -->
+    <!-- ========================================== -->
+    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+      <div class="section-header">
+        <p class="section-eyebrow" data-lang-key="contactEyebrow">Get in Touch</p>
+        <h2 id="contact-heading" class="section-title" data-lang-key="contactTitle">Contact Us</h2>
+        <p class="section-subtitle" data-lang-key="contactSubtitle">We'd love to hear from you.</p>
+      </div>
+      
+      <form class="contact-form" id="contact-form" action="/contact" method="POST" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-name" data-lang-key="labelName">Full Name</label>
+            <input type="text" id="contact-name" name="name" required autocomplete="name" aria-required="true" placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="contact-email" data-lang-key="labelEmail">Email Address</label>
+            <input type="email" id="contact-email" name="email" required autocomplete="email" aria-required="true" placeholder="your@email.com">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="contact-phone" data-lang-key="labelPhone">Phone Number</label>
+          <input type="tel" id="contact-phone" name="phone" autocomplete="tel" placeholder="+1 555 000 0000">
+        </div>
+        
+        <div class="form-group">
+          <label for="contact-message" data-lang-key="labelMessage">Message</label>
+          <textarea id="contact-message" name="message" rows="5" required aria-required="true" placeholder="How can we help you?"></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-large" data-lang-key="btnSendMessage">Send Message</button>
+      </form>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- NEWSLETTER SECTION                         -->
+    <!-- ========================================== -->
+    <section id="newsletter" class="newsletter-section" aria-labelledby="newsletter-heading">
+      <div class="newsletter-container">
+        <h2 id="newsletter-heading" class="newsletter-title" data-lang-key="newsletterTitle">Join the Savora Experience</h2>
+        <p class="newsletter-text" data-lang-key="newsletterText">Subscribe for exclusive offers, new menu updates, and culinary inspiration.</p>
+        
+        <form class="newsletter-form" id="newsletter-form" action="/subscribe" method="POST" novalidate>
+          <label for="newsletter-email" class="visually-hidden" data-lang-key="labelEmail">Email Address</label>
+          <div class="newsletter-input-group">
+            <input 
+              type="email" 
+              id="newsletter-email" 
+              name="email" 
+              required 
+              autocomplete="email" 
+              aria-required="true"
+              placeholder="Enter your email address"
+              data-lang-key="newsletterPlaceholder"
+            >
+            <button type="submit" class="btn btn-subscribe" data-lang-key="btnSubscribe">Subscribe</button>
+          </div>
+        </form>
+        
+        <p class="newsletter-disclaimer" data-lang-key="newsletterDisclaimer">No spam, ever. Unsubscribe anytime.</p>
+      </div>
+    </section>
+    
+  </main>
+  
+  <!-- ============================================ -->
+  <!-- FOOTER                                       -->
+  <!-- ============================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <svg class="footer-logo" width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="2"/>
+          <path d="M40 20C40 20 25 30 25 42C25 52 32 58 40 58C48 58 55 52 55 42C55 30 40 20 40 20Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="40" cy="42" r="8" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span class="footer-brand-name">Savora</span>
+        <p class="footer-tagline" data-lang-key="footerTagline">Taste the Extraordinary</p>
+      </div>
+      
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-nav-column">
+          <h4 class="footer-nav-title" data-lang-key="footerExplore">Explore</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#home" data-lang-key="navHome">Home</a></li>
+            <li><a href="#menu" data-lang-key="navMenu">Menu</a></li>
+            <li><a href="#gallery" data-lang-key="navGallery">Gallery</a></li>
+            <li><a href="#about" data-lang-key="navAbout">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-column">
+          <h4 class="footer-nav-title" data-lang-key="footerServices">Services</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#reservation" data-lang-key="navReservation">Reservation</a></li>
+            <li><a href="#location" data-lang-key="navLocation">Location</a></li>
+            <li><a href="#contact" data-lang-key="navContact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-column">
+          <h4 class="footer-nav-title" data-lang-key="footerLegal">Legal</h4>
+          <ul class="footer-nav-list">
+            <li><a href="/privacy" data-lang-key="footerPrivacy">Privacy Policy</a></li>
+            <li><a href="/terms" data-lang-key="footerTerms">Terms of Service</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">2026 © All Rights Reserved</p>
+        <p class="footer-credit" data-lang-key="footerCredit">Designed & Developed by <strong>Nadir Salaheddine</strong></p>
+      </div>
     </div>
-
+  </footer>
+  
+  <!-- ============================================ -->
+  <!-- CART SIDEBAR                                 -->
+  <!-- ============================================ -->
+  <aside id="cart-sidebar" class="sidebar cart-sidebar" role="dialog" aria-modal="true" aria-label="Shopping cart" hidden>
+    <div class="sidebar-header">
+      <h2 class="sidebar-title" data-lang-key="cartTitle">Your Cart</h2>
+      <button class="sidebar-close" aria-label="Close cart" data-action="close-cart">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    
+    <div class="cart-content">
+      <!-- Cart Items -->
+      <div class="cart-items" id="cart-items" role="list" aria-label="Cart items">
+        <!-- Empty State -->
+        <div class="cart-empty" id="cart-empty">
+          <div class="empty-state-icon" aria-hidden="true">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          </div>
+          <h3 class="empty-state-title" data-lang-key="emptyCartTitle">Your cart is empty</h3>
+          <p class="empty-state-text" data-lang-key="emptyCartText">Explore our menu and add your favorites.</p>
+          <a href="#menu" class="btn btn-primary" data-lang-key="btnBrowseMenu">Browse Menu</a>
+        </div>
+      </div>
+      
+      <!-- Cart Summary -->
+      <div class="cart-summary" id="cart-summary" hidden>
+        <div class="cart-coupon">
+          <label for="cart-coupon-input" class="visually-hidden" data-lang-key="labelCoupon">Coupon Code</label>
+          <div class="coupon-input-group">
+            <input type="text" id="cart-coupon-input" placeholder="Enter coupon code" data-lang-key="couponPlaceholder">
+            <button type="button" class="btn btn-apply" data-action="apply-coupon" data-lang-key="btnApply">Apply</button>
+          </div>
+        </div>
+        
+        <div class="cart-totals">
+          <div class="cart-line">
+            <span data-lang-key="labelSubtotal">Subtotal</span>
+            <span class="cart-subtotal" data-price="0.00">$0.00</span>
+          </div>
+          <div class="cart-line">
+            <span data-lang-key="labelDelivery">Delivery Fee</span>
+            <span class="cart-delivery" data-price="5.00">$5.00</span>
+          </div>
+          <div class="cart-line">
+            <span data-lang-key="labelTax">Tax</span>
+            <span class="cart-tax" data-price="0.00">$0.00</span>
+          </div>
+          <div class="cart-line cart-discount-line" hidden>
+            <span data-lang-key="labelDiscount">Discount</span>
+            <span class="cart-discount" data-price="0.00">-$0.00</span>
+          </div>
+          <div class="cart-line cart-total-line">
+            <span data-lang-key="labelTotal">Grand Total</span>
+            <span class="cart-total" data-price="0.00">$0.00</span>
+          </div>
+        </div>
+        
+        <button type="button" class="btn btn-primary btn-large btn-checkout" data-action="checkout" data-lang-key="btnCheckout">Proceed to Checkout</button>
+      </div>
+    </div>
+  </aside>
+  
+  <!-- ============================================ -->
+  <!-- WISHLIST SIDEBAR                             -->
+  <!-- ============================================ -->
+  <aside id="wishlist-sidebar" class="sidebar wishlist-sidebar" role="dialog" aria-modal="true" aria-label="Wishlist" hidden>
+    <div class="sidebar-header">
+      <h2 class="sidebar-title" data-lang-key="wishlistTitle">Your Favorites</h2>
+      <button class="sidebar-close" aria-label="Close wishlist" data-action="close-wishlist">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    
+    <div class="wishlist-content">
+      <div class="wishlist-items" id="wishlist-items" role="list" aria-label="Wishlist items">
+        <!-- Empty State -->
+        <div class="wishlist-empty" id="wishlist-empty">
+          <div class="empty-state-icon" aria-hidden="true">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <h3 class="empty-state-title" data-lang-key="emptyWishlistTitle">No favorites yet</h3>
+          <p class="empty-state-text" data-lang-key="emptyWishlistText">Tap the heart icon on any dish to save it here.</p>
+          <a href="#menu" class="btn btn-primary" data-lang-key="btnBrowseMenu">Browse Menu</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+  
+  <!-- ============================================ -->
+  <!-- CHECKOUT MODAL                               -->
+  <!-- ============================================ -->
+  <div id="checkout-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Checkout" hidden>
+    <div class="modal checkout-modal">
+      <div class="modal-header">
+        <h2 class="modal-title" data-lang-key="checkoutTitle">Checkout</h2>
+        <button class="modal-close" aria-label="Close checkout" data-action="close-checkout">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      
+      <div class="checkout-content">
+        <form class="checkout-form" id="checkout-form" action="/checkout" method="POST" novalidate>
+          <!-- Personal Info -->
+          <fieldset class="checkout-fieldset">
+            <legend data-lang-key="checkoutPersonalInfo">Personal Information</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkout-firstname" data-lang-key="labelFirstName">First Name</label>
+                <input type="text" id="checkout-firstname" name="firstname" required autocomplete="given-name" aria-required="true">
+              </div>
+              <div class="form-group">
+                <label for="checkout-lastname" data-lang-key="labelLastName">Last Name</label>
+                <input type="text" id="checkout-lastname" name="lastname" required autocomplete="family-name" aria-required="true">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkout-phone" data-lang-key="labelPhone">Phone Number</label>
+                <input type="tel" id="checkout-phone" name="phone" required autocomplete="tel" aria-required="true">
+              </div>
+              <div class="form-group">
+                <label for="checkout-email" data-lang-key="labelEmail">Email Address</label>
+                <input type="email" id="checkout-email" name="email" required autocomplete="email" aria-required="true">
+              </div>
+            </div>
+          </fieldset>
+          
+          <!-- Address -->
+          <fieldset class="checkout-fieldset">
+            <legend data-lang-key="checkoutAddress">Delivery Address</legend>
+            <div class="form-group">
+              <label for="checkout-address" data-lang-key="labelAddress">Address</label>
+              <input type="text" id="checkout-address" name="address" required autocomplete="street-address" aria-required="true">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkout-city" data-lang-key="labelCity">City</label>
+                <input type="text" id="checkout-city" name="city" required autocomplete="address-level2" aria-required="true">
+              </div>
+              <div class="form-group">
+                <label for="checkout-postal" data-lang-key="labelPostal">Postal Code</label>
+                <input type="text" id="checkout-postal" name="postal" required autocomplete="postal-code" aria-required="true">
+              </div>
+            </div>
+          </fieldset>
+          
+          <!-- Delivery Method -->
+          <fieldset class="checkout-fieldset">
+            <legend data-lang-key="checkoutDeliveryMethod">Delivery Method</legend>
+            <div class="delivery-options">
+              <label class="delivery-option">
+                <input type="radio" name="delivery" value="pickup" checked>
+                <span class="delivery-option-label" data-lang-key="deliveryPickup">Pickup</span>
+              </label>
+              <label class="delivery-option">
+                <input type="radio" name="delivery" value="delivery">
+                <span class="delivery-option-label" data-lang-key="deliveryHome">Home Delivery</span>
+              </label>
+            </div>
+          </fieldset>
+          
+          <!-- Order Notes -->
+          <div class="form-group">
+            <label for="checkout-notes" data-lang-key="labelOrderNotes">Order Notes</label>
+            <textarea id="checkout-notes" name="notes" rows="2" placeholder="Special instructions..."></textarea>
+          </div>
+          
+          <!-- Payment Methods -->
+          <fieldset class="checkout-fieldset">
+            <legend data-lang-key="checkoutPayment">Payment Method</legend>
+            <div class="payment-options">
+              <label class="payment-option">
+                <input type="radio" name="payment" value="cod" checked>
+                <span class="payment-option-label" data-lang-key="paymentCOD">Cash on Delivery</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="visa">
+                <span class="payment-option-label" data-lang-key="paymentVisa">Visa</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="mastercard">
+                <span class="payment-option-label" data-lang-key="paymentMastercard">MasterCard</span>
+              </label>
+            </div>
+            
+            <!-- Card Details (Hidden by default, shown via JS when card selected) -->
+            <div class="card-details" id="card-details" hidden>
+              <div class="form-group">
+                <label for="card-number" data-lang-key="labelCardNumber">Card Number</label>
+                <input type="text" id="card-number" name="card_number" placeholder="0000 0000 0000 0000" maxlength="19" autocomplete="cc-number">
+              </div>
+              <div class="form-group">
+                <label for="card-holder" data-lang-key="labelCardHolder">Card Holder</label>
+                <input type="text" id="card-holder" name="card_holder" placeholder="Name on card" autocomplete="cc-name">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="card-expiry" data-lang-key="labelCardExpiry">Expiry Date</label>
+                  <input type="text" id="card-expiry" name="card_expiry" placeholder="MM/YY" maxlength="5" autocomplete="cc-exp">
+                </div>
+                <div class="form-group">
+                  <label for="card-cvv" data-lang-key="labelCardCVV">CVV</label>
+                  <input type="text" id="card-cvv" name="card_cvv" placeholder="123" maxlength="4" autocomplete="cc-csc">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          
+          <button type="submit" class="btn btn-primary btn-large" data-lang-key="btnPlaceOrder">Place Order</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Checkout Success / Thank You Page -->
+  <div id="checkout-success" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Order confirmation" hidden>
+    <div class="modal success-modal">
+      <div class="success-animation" aria-hidden="true">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+      </div>
+      <h2 class="success-title" data-lang-key="checkoutSuccessTitle">Thank You!</h2>
+      <p class="success-text" data-lang-key="checkoutSuccessText">Your order has been placed successfully.</p>
+      <div class="order-details" id="order-details">
+        <p><span data-lang-key="labelOrderNumber">Order Number:</span> <strong id="order-number">#SAV-000000</strong></p>
+        <p><span data-lang-key="labelEstDelivery">Estimated Delivery:</span> <strong id="est-delivery">30-45 min</strong></p>
+      </div>
+      <button type="button" class="btn btn-primary" data-action="close-success" data-lang-key="btnContinue">Continue Shopping</button>
+    </div>
+  </div>
+  
+  <!-- ============================================ -->
+  <!-- GALLERY LIGHTBOX                             -->
+  <!-- ============================================ -->
+  <div id="lightbox" class="modal-overlay lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close lightbox">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous image">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <img src="" alt="" class="lightbox-image" id="lightbox-image">
+    <button class="lightbox-nav lightbox-next" aria-label="Next image">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+  
+  <!-- ============================================ -->
+  <!-- FLOATING ACTION BUTTONS                      -->
+  <!-- ============================================ -->
+  <div class="floating-actions" aria-label="Quick actions">
+    <a href="https://wa.me/15550000000" class="floating-btn floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+    <a href="tel:+15550000000" class="floating-btn floating-call" aria-label="Call us">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    </a>
+    <button class="floating-btn floating-top" id="back-to-top" aria-label="Back to top" hidden>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+  </div>
+  
+  <!-- ============================================ -->
+  <!-- PHASE 3: SCRIPTS                             -->
+  <!-- ============================================ -->
+  <!-- GSAP Library -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> -->
+  <!-- Savora Core JS -->
+  <!-- <script src="js/savora-core.js"></script> -->
+  
 </body>
 </html>
